@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1851618C1DB772CD00FD1576 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851618B1DB772CD00FD1576 /* main.m */; };
-		1851618F1DB772CD00FD1576 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851618E1DB772CD00FD1576 /* AppDelegate.m */; };
 		185161921DB772CD00FD1576 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185161911DB772CD00FD1576 /* ViewController.m */; };
 		185161951DB772CD00FD1576 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185161931DB772CD00FD1576 /* Main.storyboard */; };
 		185161971DB772CE00FD1576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185161961DB772CE00FD1576 /* Assets.xcassets */; };
 		1851619A1DB772CE00FD1576 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185161981DB772CE00FD1576 /* LaunchScreen.storyboard */; };
 		185161A51DB772CE00FD1576 /* LPDevToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 185161A41DB772CE00FD1576 /* LPDevToolsTests.m */; };
+		185161B21DB77D4F00FD1576 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185161B11DB77D4F00FD1576 /* AppDelegate.m */; };
+		185161CD1DB77F5900FD1576 /* _JZNavigationInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 185161C01DB77F5900FD1576 /* _JZNavigationInteractiveTransition.m */; };
+		185161CE1DB77F5900FD1576 /* _JZValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 185161C21DB77F5900FD1576 /* _JZValue.m */; };
+		185161CF1DB77F5900FD1576 /* NSNumber+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 185161C41DB77F5900FD1576 /* NSNumber+JZExtension.m */; };
+		185161D01DB77F5900FD1576 /* UINavigationBar+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 185161C61DB77F5900FD1576 /* UINavigationBar+JZExtension.m */; };
+		185161D11DB77F5900FD1576 /* UIToolbar+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 185161C81DB77F5900FD1576 /* UIToolbar+JZExtension.m */; };
+		185161D21DB77F5900FD1576 /* UINavigationController+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 185161CA1DB77F5900FD1576 /* UINavigationController+JZExtension.m */; };
+		185161D31DB77F5900FD1576 /* UIViewController+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 185161CC1DB77F5900FD1576 /* UIViewController+JZExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +36,6 @@
 /* Begin PBXFileReference section */
 		185161871DB772CD00FD1576 /* LPDevTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LPDevTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1851618B1DB772CD00FD1576 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1851618D1DB772CD00FD1576 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1851618E1DB772CD00FD1576 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		185161901DB772CD00FD1576 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		185161911DB772CD00FD1576 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		185161941DB772CD00FD1576 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,6 +45,24 @@
 		185161A01DB772CE00FD1576 /* LPDevToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LPDevToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		185161A41DB772CE00FD1576 /* LPDevToolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPDevToolsTests.m; sourceTree = "<group>"; };
 		185161A61DB772CE00FD1576 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		185161B01DB77D4F00FD1576 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		185161B11DB77D4F00FD1576 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		185161BC1DB77F5900FD1576 /* JZNavigationExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZNavigationExtension.h; sourceTree = "<group>"; };
+		185161BE1DB77F5900FD1576 /* _JZ-objc-internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "_JZ-objc-internal.h"; sourceTree = "<group>"; };
+		185161BF1DB77F5900FD1576 /* _JZNavigationInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _JZNavigationInteractiveTransition.h; sourceTree = "<group>"; };
+		185161C01DB77F5900FD1576 /* _JZNavigationInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _JZNavigationInteractiveTransition.m; sourceTree = "<group>"; };
+		185161C11DB77F5900FD1576 /* _JZValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _JZValue.h; sourceTree = "<group>"; };
+		185161C21DB77F5900FD1576 /* _JZValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _JZValue.m; sourceTree = "<group>"; };
+		185161C31DB77F5900FD1576 /* NSNumber+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JZExtension.h"; sourceTree = "<group>"; };
+		185161C41DB77F5900FD1576 /* NSNumber+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JZExtension.m"; sourceTree = "<group>"; };
+		185161C51DB77F5900FD1576 /* UINavigationBar+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+JZExtension.h"; sourceTree = "<group>"; };
+		185161C61DB77F5900FD1576 /* UINavigationBar+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+JZExtension.m"; sourceTree = "<group>"; };
+		185161C71DB77F5900FD1576 /* UIToolbar+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+JZExtension.h"; sourceTree = "<group>"; };
+		185161C81DB77F5900FD1576 /* UIToolbar+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+JZExtension.m"; sourceTree = "<group>"; };
+		185161C91DB77F5900FD1576 /* UINavigationController+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JZExtension.h"; sourceTree = "<group>"; };
+		185161CA1DB77F5900FD1576 /* UINavigationController+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JZExtension.m"; sourceTree = "<group>"; };
+		185161CB1DB77F5900FD1576 /* UIViewController+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JZExtension.h"; sourceTree = "<group>"; };
+		185161CC1DB77F5900FD1576 /* UIViewController+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JZExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +104,7 @@
 		185161891DB772CD00FD1576 /* LPDevTools */ = {
 			isa = PBXGroup;
 			children = (
-				1851618D1DB772CD00FD1576 /* AppDelegate.h */,
-				1851618E1DB772CD00FD1576 /* AppDelegate.m */,
+				185161AF1DB77D4F00FD1576 /* Classes */,
 				185161901DB772CD00FD1576 /* ViewController.h */,
 				185161911DB772CD00FD1576 /* ViewController.m */,
 				185161931DB772CD00FD1576 /* Main.storyboard */,
@@ -109,6 +131,111 @@
 				185161A61DB772CE00FD1576 /* Info.plist */,
 			);
 			path = LPDevToolsTests;
+			sourceTree = "<group>";
+		};
+		185161AF1DB77D4F00FD1576 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				185161B81DB77F1F00FD1576 /* Util */,
+				185161BA1DB77F1F00FD1576 /* Vendor */,
+				185161B31DB77E6A00FD1576 /* BaseController */,
+				185161B41DB77E6A00FD1576 /* Controller */,
+				185161B61DB77E6A00FD1576 /* Model */,
+				185161B71DB77E6A00FD1576 /* View */,
+				185161B01DB77D4F00FD1576 /* AppDelegate.h */,
+				185161B11DB77D4F00FD1576 /* AppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		185161B31DB77E6A00FD1576 /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		185161B41DB77E6A00FD1576 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				185161B51DB77E6A00FD1576 /* Home */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		185161B51DB77E6A00FD1576 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		185161B61DB77E6A00FD1576 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		185161B71DB77E6A00FD1576 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		185161B81DB77F1F00FD1576 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				185161B91DB77F1F00FD1576 /* Category */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		185161B91DB77F1F00FD1576 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		185161BA1DB77F1F00FD1576 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				185161BB1DB77F5900FD1576 /* JZNavigationExtension */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		185161BB1DB77F5900FD1576 /* JZNavigationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				185161BC1DB77F5900FD1576 /* JZNavigationExtension.h */,
+				185161BD1DB77F5900FD1576 /* Private */,
+				185161C91DB77F5900FD1576 /* UINavigationController+JZExtension.h */,
+				185161CA1DB77F5900FD1576 /* UINavigationController+JZExtension.m */,
+				185161CB1DB77F5900FD1576 /* UIViewController+JZExtension.h */,
+				185161CC1DB77F5900FD1576 /* UIViewController+JZExtension.m */,
+			);
+			path = JZNavigationExtension;
+			sourceTree = "<group>";
+		};
+		185161BD1DB77F5900FD1576 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				185161BE1DB77F5900FD1576 /* _JZ-objc-internal.h */,
+				185161BF1DB77F5900FD1576 /* _JZNavigationInteractiveTransition.h */,
+				185161C01DB77F5900FD1576 /* _JZNavigationInteractiveTransition.m */,
+				185161C11DB77F5900FD1576 /* _JZValue.h */,
+				185161C21DB77F5900FD1576 /* _JZValue.m */,
+				185161C31DB77F5900FD1576 /* NSNumber+JZExtension.h */,
+				185161C41DB77F5900FD1576 /* NSNumber+JZExtension.m */,
+				185161C51DB77F5900FD1576 /* UINavigationBar+JZExtension.h */,
+				185161C61DB77F5900FD1576 /* UINavigationBar+JZExtension.m */,
+				185161C71DB77F5900FD1576 /* UIToolbar+JZExtension.h */,
+				185161C81DB77F5900FD1576 /* UIToolbar+JZExtension.m */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,9 +341,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185161D01DB77F5900FD1576 /* UINavigationBar+JZExtension.m in Sources */,
 				185161921DB772CD00FD1576 /* ViewController.m in Sources */,
-				1851618F1DB772CD00FD1576 /* AppDelegate.m in Sources */,
 				1851618C1DB772CD00FD1576 /* main.m in Sources */,
+				185161CE1DB77F5900FD1576 /* _JZValue.m in Sources */,
+				185161D31DB77F5900FD1576 /* UIViewController+JZExtension.m in Sources */,
+				185161CF1DB77F5900FD1576 /* NSNumber+JZExtension.m in Sources */,
+				185161D21DB77F5900FD1576 /* UINavigationController+JZExtension.m in Sources */,
+				185161B21DB77D4F00FD1576 /* AppDelegate.m in Sources */,
+				185161CD1DB77F5900FD1576 /* _JZNavigationInteractiveTransition.m in Sources */,
+				185161D11DB77F5900FD1576 /* UIToolbar+JZExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +545,7 @@
 				185161AB1DB772CE00FD1576 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		185161AC1DB772CE00FD1576 /* Build configuration list for PBXNativeTarget "LPDevToolsTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +554,7 @@
 				185161AE1DB772CE00FD1576 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
