@@ -155,6 +155,7 @@
 		1851617F1DB772CC00FD1576 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LP;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = lpdev.com;
 				TargetAttributes = {
