@@ -9,5 +9,10 @@
 #ifndef Vendors_h
 #define Vendors_h
 
+#ifdef __OBJC__
+
+#import "JZNavigationExtension.h"
+
+#endif
 
 #endif /* Vendors_h */

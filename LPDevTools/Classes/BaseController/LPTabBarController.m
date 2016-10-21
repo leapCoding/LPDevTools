@@ -8,6 +8,7 @@
 
 #import "LPTabBarController.h"
 #import "LPHomeController.h"
+#import "LPNavigationController.h"
 
 @interface LPTabBarController ()
 
@@ -29,8 +30,8 @@
 }
 
 - (void)setupViewControllers {
-    UINavigationController *homeNav = [[UINavigationController alloc]initWithRootViewController:self.homeController];
-    UINavigationController *homeNav1 = [[UINavigationController alloc]initWithRootViewController:[[LPHomeController alloc]init]];
+    UINavigationController *homeNav = [[LPNavigationController alloc]initWithRootViewController:self.homeController];
+    UINavigationController *homeNav1 = [[LPNavigationController alloc]initWithRootViewController:[[LPHomeController alloc]init]];
     self.viewControllers = @[homeNav,homeNav1];
     
     [self customTabBarForViewController];
