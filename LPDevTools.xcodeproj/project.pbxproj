@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182B19DD1DC0892500C8DDE3 /* CYLPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19D61DC0892500C8DDE3 /* CYLPlusButton.m */; };
+		182B19DE1DC0892500C8DDE3 /* CYLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19D81DC0892500C8DDE3 /* CYLTabBar.m */; };
+		182B19DF1DC0892500C8DDE3 /* CYLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19DA1DC0892500C8DDE3 /* CYLTabBarController.m */; };
+		182B19E01DC0892500C8DDE3 /* UIViewController+CYLTabBarControllerExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19DC1DC0892500C8DDE3 /* UIViewController+CYLTabBarControllerExtention.m */; };
+		182B19E31DC089E500C8DDE3 /* LPTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19E21DC089E500C8DDE3 /* LPTabBarControllerConfig.m */; };
+		182B19E61DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19E51DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m */; };
+		182B19E91DC0A47F00C8DDE3 /* LPSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19E81DC0A47F00C8DDE3 /* LPSecondViewController.m */; };
 		183F6D0D1DBA134F009F91F4 /* LPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183F6D0C1DBA134F009F91F4 /* LPNavigationController.m */; };
 		1851618C1DB772CD00FD1576 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851618B1DB772CD00FD1576 /* main.m */; };
 		185161971DB772CE00FD1576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185161961DB772CE00FD1576 /* Assets.xcassets */; };
@@ -35,6 +42,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		182B19D41DC0892400C8DDE3 /* CYLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLConstants.h; sourceTree = "<group>"; };
+		182B19D51DC0892500C8DDE3 /* CYLPlusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLPlusButton.h; sourceTree = "<group>"; };
+		182B19D61DC0892500C8DDE3 /* CYLPlusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLPlusButton.m; sourceTree = "<group>"; };
+		182B19D71DC0892500C8DDE3 /* CYLTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLTabBar.h; sourceTree = "<group>"; };
+		182B19D81DC0892500C8DDE3 /* CYLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLTabBar.m; sourceTree = "<group>"; };
+		182B19D91DC0892500C8DDE3 /* CYLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLTabBarController.h; sourceTree = "<group>"; };
+		182B19DA1DC0892500C8DDE3 /* CYLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLTabBarController.m; sourceTree = "<group>"; };
+		182B19DB1DC0892500C8DDE3 /* UIViewController+CYLTabBarControllerExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CYLTabBarControllerExtention.h"; sourceTree = "<group>"; };
+		182B19DC1DC0892500C8DDE3 /* UIViewController+CYLTabBarControllerExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CYLTabBarControllerExtention.m"; sourceTree = "<group>"; };
+		182B19E11DC089E500C8DDE3 /* LPTabBarControllerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTabBarControllerConfig.h; sourceTree = "<group>"; };
+		182B19E21DC089E500C8DDE3 /* LPTabBarControllerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTabBarControllerConfig.m; sourceTree = "<group>"; };
+		182B19E41DC0944D00C8DDE3 /* CYLPlusButtonSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLPlusButtonSubclass.h; sourceTree = "<group>"; };
+		182B19E51DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLPlusButtonSubclass.m; sourceTree = "<group>"; };
+		182B19E71DC0A47F00C8DDE3 /* LPSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPSecondViewController.h; sourceTree = "<group>"; };
+		182B19E81DC0A47F00C8DDE3 /* LPSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPSecondViewController.m; sourceTree = "<group>"; };
 		183F6D0B1DBA134F009F91F4 /* LPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNavigationController.h; sourceTree = "<group>"; };
 		183F6D0C1DBA134F009F91F4 /* LPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNavigationController.m; sourceTree = "<group>"; };
 		185161871DB772CD00FD1576 /* LPDevTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LPDevTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +111,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		182B19D31DC0892400C8DDE3 /* CYLTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				182B19D41DC0892400C8DDE3 /* CYLConstants.h */,
+				182B19D51DC0892500C8DDE3 /* CYLPlusButton.h */,
+				182B19D61DC0892500C8DDE3 /* CYLPlusButton.m */,
+				182B19D71DC0892500C8DDE3 /* CYLTabBar.h */,
+				182B19D81DC0892500C8DDE3 /* CYLTabBar.m */,
+				182B19D91DC0892500C8DDE3 /* CYLTabBarController.h */,
+				182B19DA1DC0892500C8DDE3 /* CYLTabBarController.m */,
+				182B19DB1DC0892500C8DDE3 /* UIViewController+CYLTabBarControllerExtention.h */,
+				182B19DC1DC0892500C8DDE3 /* UIViewController+CYLTabBarControllerExtention.m */,
+			);
+			path = CYLTabBarController;
+			sourceTree = "<group>";
+		};
 		1851617E1DB772CC00FD1576 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +197,10 @@
 				18797D5C1DB855DB00AB093E /* LPTabBarController.m */,
 				183F6D0B1DBA134F009F91F4 /* LPNavigationController.h */,
 				183F6D0C1DBA134F009F91F4 /* LPNavigationController.m */,
+				182B19E11DC089E500C8DDE3 /* LPTabBarControllerConfig.h */,
+				182B19E21DC089E500C8DDE3 /* LPTabBarControllerConfig.m */,
+				182B19E41DC0944D00C8DDE3 /* CYLPlusButtonSubclass.h */,
+				182B19E51DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m */,
 			);
 			path = BaseController;
 			sourceTree = "<group>";
@@ -176,6 +218,8 @@
 			children = (
 				18797D5E1DB8562500AB093E /* LPHomeController.h */,
 				18797D5F1DB8562500AB093E /* LPHomeController.m */,
+				182B19E71DC0A47F00C8DDE3 /* LPSecondViewController.h */,
+				182B19E81DC0A47F00C8DDE3 /* LPSecondViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -212,6 +256,7 @@
 		185161BA1DB77F1F00FD1576 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				182B19D31DC0892400C8DDE3 /* CYLTabBarController */,
 				185161BB1DB77F5900FD1576 /* JZNavigationExtension */,
 				18797D621DB88FDD00AB093E /* Vendors.h */,
 			);
@@ -351,15 +396,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182B19E61DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m in Sources */,
+				182B19DE1DC0892500C8DDE3 /* CYLTabBar.m in Sources */,
 				185161D01DB77F5900FD1576 /* UINavigationBar+JZExtension.m in Sources */,
+				182B19E31DC089E500C8DDE3 /* LPTabBarControllerConfig.m in Sources */,
 				1851618C1DB772CD00FD1576 /* main.m in Sources */,
 				185161CE1DB77F5900FD1576 /* _JZValue.m in Sources */,
 				183F6D0D1DBA134F009F91F4 /* LPNavigationController.m in Sources */,
 				18797D5D1DB855DB00AB093E /* LPTabBarController.m in Sources */,
 				185161D31DB77F5900FD1576 /* UIViewController+JZExtension.m in Sources */,
+				182B19DD1DC0892500C8DDE3 /* CYLPlusButton.m in Sources */,
+				182B19E01DC0892500C8DDE3 /* UIViewController+CYLTabBarControllerExtention.m in Sources */,
 				18797D601DB8562500AB093E /* LPHomeController.m in Sources */,
+				182B19E91DC0A47F00C8DDE3 /* LPSecondViewController.m in Sources */,
 				185161CF1DB77F5900FD1576 /* NSNumber+JZExtension.m in Sources */,
 				185161D21DB77F5900FD1576 /* UINavigationController+JZExtension.m in Sources */,
+				182B19DF1DC0892500C8DDE3 /* CYLTabBarController.m in Sources */,
 				185161B21DB77D4F00FD1576 /* AppDelegate.m in Sources */,
 				185161CD1DB77F5900FD1576 /* _JZNavigationInteractiveTransition.m in Sources */,
 				185161D11DB77F5900FD1576 /* UIToolbar+JZExtension.m in Sources */,

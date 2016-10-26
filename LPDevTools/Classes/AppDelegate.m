@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LPTabBarController.h"
+#import "LPTabBarControllerConfig.h"
 
 @interface AppDelegate ()
 
@@ -22,8 +23,9 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.tabBarController = [[LPTabBarController alloc]init];
-    self.window.rootViewController = self.tabBarController;
+    LPTabBarControllerConfig *tabBarControllerConfig = [[LPTabBarControllerConfig alloc] init];
+//    self.tabBarController = [[LPTabBarController alloc]init];
+    self.window.rootViewController = tabBarControllerConfig.tabBarController;
     [self.window makeKeyAndVisible];
     
     return YES;

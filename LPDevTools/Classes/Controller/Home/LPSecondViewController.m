@@ -1,28 +1,23 @@
 //
-//  LPHomeController.m
+//  LPSecondViewController.m
 //  LPDevTools
 //
-//  Created by lipeng on 16/10/20.
+//  Created by lipeng on 16/10/26.
 //  Copyright © 2016年 lpdev.com. All rights reserved.
 //
 
-#import "LPHomeController.h"
 #import "LPSecondViewController.h"
 
-@interface LPHomeController ()
+@interface LPSecondViewController ()
 
 @end
 
-@implementation LPHomeController
+@implementation LPSecondViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor blueColor];
     // Do any additional setup after loading the view.
-//    self.navigationController.jz_navigationBarBackgroundAlpha = 0;
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self.navigationController pushViewController:[[LPSecondViewController alloc]init] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
