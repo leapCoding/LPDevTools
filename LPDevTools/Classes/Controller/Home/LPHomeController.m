@@ -19,6 +19,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    self.navigationController.jz_navigationBarBackgroundAlpha = 0;
+    NSArray *ass = @[@"1",@"2"];
+    NSString *ss = [ass objectAtIndex:1];
+//    NSLog(@"---------------%@",ass[0]);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

@@ -11,4 +11,6 @@
 
 #import "Vendors.h"
 
+#import "Categorys.h"
+
 #endif /* LPDevToolsPrefix_pch */

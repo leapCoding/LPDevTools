@@ -29,6 +29,10 @@
 		185161D31DB77F5900FD1576 /* UIViewController+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 185161CC1DB77F5900FD1576 /* UIViewController+JZExtension.m */; };
 		18797D5D1DB855DB00AB093E /* LPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18797D5C1DB855DB00AB093E /* LPTabBarController.m */; };
 		18797D601DB8562500AB093E /* LPHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18797D5F1DB8562500AB093E /* LPHomeController.m */; };
+		1891181C1DC1CFE400502A52 /* CLLocation+YCLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891181B1DC1CFE400502A52 /* CLLocation+YCLocation.m */; };
+		1891181F1DC1D0FC00502A52 /* NSArray+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891181E1DC1D0FC00502A52 /* NSArray+SafeAccess.m */; };
+		189118231DC1EA1900502A52 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 189118221DC1EA1900502A52 /* Aspects.m */; };
+		189118261DC1F50900502A52 /* LPAspectsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 189118251DC1F50900502A52 /* LPAspectsConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +95,15 @@
 		18797D5F1DB8562500AB093E /* LPHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPHomeController.m; sourceTree = "<group>"; };
 		18797D611DB8755800AB093E /* LPDevToolsPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPDevToolsPrefix.pch; sourceTree = "<group>"; };
 		18797D621DB88FDD00AB093E /* Vendors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vendors.h; sourceTree = "<group>"; };
+		189118191DC1ADD700502A52 /* Categorys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categorys.h; sourceTree = "<group>"; };
+		1891181A1DC1CFE400502A52 /* CLLocation+YCLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+YCLocation.h"; sourceTree = "<group>"; };
+		1891181B1DC1CFE400502A52 /* CLLocation+YCLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+YCLocation.m"; sourceTree = "<group>"; };
+		1891181D1DC1D0FC00502A52 /* NSArray+SafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SafeAccess.h"; sourceTree = "<group>"; };
+		1891181E1DC1D0FC00502A52 /* NSArray+SafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeAccess.m"; sourceTree = "<group>"; };
+		189118211DC1EA1900502A52 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		189118221DC1EA1900502A52 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		189118241DC1F50900502A52 /* LPAspectsConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPAspectsConfig.h; sourceTree = "<group>"; };
+		189118251DC1F50900502A52 /* LPAspectsConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPAspectsConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +161,8 @@
 		185161891DB772CD00FD1576 /* LPDevTools */ = {
 			isa = PBXGroup;
 			children = (
-				185161AF1DB77D4F00FD1576 /* Classes */,
 				185161961DB772CE00FD1576 /* Assets.xcassets */,
+				185161AF1DB77D4F00FD1576 /* Classes */,
 				185161981DB772CE00FD1576 /* LaunchScreen.storyboard */,
 				1851619B1DB772CE00FD1576 /* Info.plist */,
 				1851618A1DB772CD00FD1576 /* Supporting Files */,
@@ -249,6 +262,11 @@
 		185161B91DB77F1F00FD1576 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				189118191DC1ADD700502A52 /* Categorys.h */,
+				1891181A1DC1CFE400502A52 /* CLLocation+YCLocation.h */,
+				1891181B1DC1CFE400502A52 /* CLLocation+YCLocation.m */,
+				1891181D1DC1D0FC00502A52 /* NSArray+SafeAccess.h */,
+				1891181E1DC1D0FC00502A52 /* NSArray+SafeAccess.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -256,6 +274,7 @@
 		185161BA1DB77F1F00FD1576 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				189118201DC1E94700502A52 /* Aspects */,
 				182B19D31DC0892400C8DDE3 /* CYLTabBarController */,
 				185161BB1DB77F5900FD1576 /* JZNavigationExtension */,
 				18797D621DB88FDD00AB093E /* Vendors.h */,
@@ -292,6 +311,17 @@
 				185161C81DB77F5900FD1576 /* UIToolbar+JZExtension.m */,
 			);
 			path = Private;
+			sourceTree = "<group>";
+		};
+		189118201DC1E94700502A52 /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				189118211DC1EA1900502A52 /* Aspects.h */,
+				189118221DC1EA1900502A52 /* Aspects.m */,
+				189118241DC1F50900502A52 /* LPAspectsConfig.h */,
+				189118251DC1F50900502A52 /* LPAspectsConfig.m */,
+			);
+			path = Aspects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +432,8 @@
 				182B19E31DC089E500C8DDE3 /* LPTabBarControllerConfig.m in Sources */,
 				1851618C1DB772CD00FD1576 /* main.m in Sources */,
 				185161CE1DB77F5900FD1576 /* _JZValue.m in Sources */,
+				1891181F1DC1D0FC00502A52 /* NSArray+SafeAccess.m in Sources */,
+				189118231DC1EA1900502A52 /* Aspects.m in Sources */,
 				183F6D0D1DBA134F009F91F4 /* LPNavigationController.m in Sources */,
 				18797D5D1DB855DB00AB093E /* LPTabBarController.m in Sources */,
 				185161D31DB77F5900FD1576 /* UIViewController+JZExtension.m in Sources */,
@@ -414,6 +446,8 @@
 				182B19DF1DC0892500C8DDE3 /* CYLTabBarController.m in Sources */,
 				185161B21DB77D4F00FD1576 /* AppDelegate.m in Sources */,
 				185161CD1DB77F5900FD1576 /* _JZNavigationInteractiveTransition.m in Sources */,
+				1891181C1DC1CFE400502A52 /* CLLocation+YCLocation.m in Sources */,
+				189118261DC1F50900502A52 /* LPAspectsConfig.m in Sources */,
 				185161D11DB77F5900FD1576 /* UIToolbar+JZExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
