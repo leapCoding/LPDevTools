@@ -15,6 +15,8 @@
 		182B19E61DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19E51DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m */; };
 		182B19E91DC0A47F00C8DDE3 /* LPSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19E81DC0A47F00C8DDE3 /* LPSecondViewController.m */; };
 		183F6D0D1DBA134F009F91F4 /* LPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183F6D0C1DBA134F009F91F4 /* LPNavigationController.m */; };
+		185062741DC2FDBC004DE3CB /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 185062731DC2FDBC004DE3CB /* NSObject+Swizzle.m */; };
+		185062771DC321A6004DE3CB /* NSMutableArray+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 185062761DC321A6004DE3CB /* NSMutableArray+SafeAccess.m */; };
 		1851618C1DB772CD00FD1576 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851618B1DB772CD00FD1576 /* main.m */; };
 		185161971DB772CE00FD1576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185161961DB772CE00FD1576 /* Assets.xcassets */; };
 		1851619A1DB772CE00FD1576 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185161981DB772CE00FD1576 /* LaunchScreen.storyboard */; };
@@ -63,6 +65,10 @@
 		182B19E81DC0A47F00C8DDE3 /* LPSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPSecondViewController.m; sourceTree = "<group>"; };
 		183F6D0B1DBA134F009F91F4 /* LPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNavigationController.h; sourceTree = "<group>"; };
 		183F6D0C1DBA134F009F91F4 /* LPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNavigationController.m; sourceTree = "<group>"; };
+		185062721DC2FDBC004DE3CB /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
+		185062731DC2FDBC004DE3CB /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
+		185062751DC321A6004DE3CB /* NSMutableArray+SafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SafeAccess.h"; sourceTree = "<group>"; };
+		185062761DC321A6004DE3CB /* NSMutableArray+SafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SafeAccess.m"; sourceTree = "<group>"; };
 		185161871DB772CD00FD1576 /* LPDevTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LPDevTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1851618B1DB772CD00FD1576 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		185161961DB772CE00FD1576 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -267,6 +273,10 @@
 				1891181B1DC1CFE400502A52 /* CLLocation+YCLocation.m */,
 				1891181D1DC1D0FC00502A52 /* NSArray+SafeAccess.h */,
 				1891181E1DC1D0FC00502A52 /* NSArray+SafeAccess.m */,
+				185062751DC321A6004DE3CB /* NSMutableArray+SafeAccess.h */,
+				185062761DC321A6004DE3CB /* NSMutableArray+SafeAccess.m */,
+				185062721DC2FDBC004DE3CB /* NSObject+Swizzle.h */,
+				185062731DC2FDBC004DE3CB /* NSObject+Swizzle.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -426,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185062741DC2FDBC004DE3CB /* NSObject+Swizzle.m in Sources */,
 				182B19E61DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m in Sources */,
 				182B19DE1DC0892500C8DDE3 /* CYLTabBar.m in Sources */,
 				185161D01DB77F5900FD1576 /* UINavigationBar+JZExtension.m in Sources */,
@@ -441,6 +452,7 @@
 				182B19E01DC0892500C8DDE3 /* UIViewController+CYLTabBarControllerExtention.m in Sources */,
 				18797D601DB8562500AB093E /* LPHomeController.m in Sources */,
 				182B19E91DC0A47F00C8DDE3 /* LPSecondViewController.m in Sources */,
+				185062771DC321A6004DE3CB /* NSMutableArray+SafeAccess.m in Sources */,
 				185161CF1DB77F5900FD1576 /* NSNumber+JZExtension.m in Sources */,
 				185161D21DB77F5900FD1576 /* UINavigationController+JZExtension.m in Sources */,
 				182B19DF1DC0892500C8DDE3 /* CYLTabBarController.m in Sources */,

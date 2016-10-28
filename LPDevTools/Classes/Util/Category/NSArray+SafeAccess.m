@@ -41,27 +41,12 @@
     return arrayTemp;
 }
 
-//+ (void)load {
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        @autoreleasepool {
-//            [self aspect_hookSelector:@selector(objectAtIndex:) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> aspectInfo){
-//                NSLog(@"sdfsdf");
-//            }error:NULL];
-//        }
-//    });
-//}
-
-- (id)My_objectAtIndex:(NSUInteger)index {
-    if (self.count <= index) {
-        
-#if DEBUG
-        NSLog(@"数组越界了");
-#endif
-        return nil;
+- (id)lp_objectAtIndex:(NSUInteger)index {
+    if (index < self.count) {
+        return [self lp_objectAtIndex:index];
     }
     
-    return [self My_objectAtIndex:index];
+    return nil;
 }
 
 @end

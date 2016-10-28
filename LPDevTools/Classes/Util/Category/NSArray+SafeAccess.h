@@ -19,4 +19,6 @@
 
 - (NSArray *)reverseArray;
 
+- (id)lp_objectAtIndex:(NSUInteger)index;
+
 @end
