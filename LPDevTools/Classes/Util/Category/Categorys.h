@@ -12,5 +12,6 @@
 #import "CLLocation+YCLocation.h"
 #import "NSArray+SafeAccess.h"
 #import "NSMutableArray+SafeAccess.h"
+#import "UIViewHeader.h"
 
 #endif /* Categorys_h */

@@ -21,7 +21,18 @@
 //    self.navigationController.jz_navigationBarBackgroundAlpha = 0;
     NSArray *ass = @[];
 //    NSString *ss = [ass objectAtIndex:2];
-    NSLog(@"---------------%@",ass[1]);
+//    NSLog(@"---------------%@",ass[1]);
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 100, 100, 100)];
+    view.backgroundColor = [UIColor redColor];
+    [self.view addSubview:view];
+//    [view createGlowLayer];
+//    [view insertGlowLayer];
+    view.glowColor = [UIColor blackColor];
+//    [view startGlowLoop];
+    
+    view.blurTintColor = [UIColor yellowColor];
+    view.blurStyle = UIViewBlurDarkStyle;
+    [view enableBlur:YES];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
