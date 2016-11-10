@@ -17,12 +17,43 @@ typedef NS_ENUM(NSUInteger, NetWorkRequestType){
     NetWorkRequestTypePost,
 };
 
+typedef NS_ENUM(NSUInteger, NetWorkResponseStatus)
+{
+    NetWorkResponseStatusSuccess,
+    NetWorkResponseStatusFailed = 9999,
+};
+
+
 typedef NS_ENUM(NSUInteger, NetWorkRequestUrl){
     NetWorkRequestUrl_None = 0,
 };
 
+@class NetWorkResponse;
+
+typedef void (^ResponseBlock)(NetWorkResponse *response);
+
 @interface NetWorkUrlConfig : NSObject
 
-+ (NSString *)urlString:(NetWorkRequestUrl)url;
++ (NetWorkUrlConfig *)sharedManager;
+
+@end
+
+@class NetWorkRequest;
+
+@interface NetWorkResponse : NSObject
+
+@property (assign, nonatomic) NSInteger code;
+
+@property (copy, nonatomic) NSString *message;
+
+@property (strong, nonatomic) NSDictionary *data;
+
+
+/** 解析后的对象/数组 */
+@property (strong, nonatomic) id result;
+
+- (instancetype)initWithResult:(NSDictionary *)result request:(NetWorkRequest *)request;
+
+- (BOOL)isSuccess;
 
 @end

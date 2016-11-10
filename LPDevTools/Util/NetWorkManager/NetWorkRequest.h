@@ -29,6 +29,6 @@
                   className:(NSString *)className
                  rquestType:(NetWorkRequestType)requestType;
 
-- (NSString *)requestType;
+- (NSString *)requestMethod;
 
 @end

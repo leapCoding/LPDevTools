@@ -37,7 +37,7 @@
     return [[[self class] alloc] initWithUrl:url params:params className:nil];
 }
 
-- (NSString *)requestType {
+- (NSString *)requestMethod {
     return @[@"GET",@"POST"][_requestType];
 }
 

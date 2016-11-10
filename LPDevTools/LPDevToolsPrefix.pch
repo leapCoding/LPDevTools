@@ -9,6 +9,8 @@
 #ifndef LPDevToolsPrefix_pch
 #define LPDevToolsPrefix_pch
 
+#import "Macros.h"
+
 #import "Vendors.h"
 
 #import "Categorys.h"
