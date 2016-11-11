@@ -8,6 +8,7 @@
 
 #import "LPHomeController.h"
 #import "LPSecondViewController.h"
+#import "LPTestModel.h"
 
 @interface LPHomeController ()
 
@@ -33,6 +34,14 @@
     view.blurTintColor = [UIColor yellowColor];
     view.blurStyle = UIViewBlurDarkStyle;
     [view enableBlur:YES];
+    
+    [[NetWorkUrlConfig sharedManager]getUrl:NetWorkRequestUrl_QueryProjectList parameters:@{@"MemberId":@"",
+                                                                                           @"Category":@"",
+                                                                                           @"Status":@"",
+                                                                                           @"PageSize":@"10",
+                                                                                           @"PageIndex":@"1"} className:NSStringFromClass([LPTestModel class]) responseBlock:^(NetWorkResponse *response) {
+                                                                                               
+                                                                                           }];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

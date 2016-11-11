@@ -19,7 +19,11 @@
         case NetWorkRequestUrl_None:
             return @"";
             break;
-            
+        case NetWorkRequestUrl_QueryProjectList:
+        {
+            return [NSString stringWithFormat:@"%@Project/%@",APIBaseURLString,@"QueryProjectList"];
+            break;
+        }
         default:
             break;
     }
@@ -58,7 +62,7 @@ static NSMutableArray *requestTasks;
     };
 }
 
-+ (void)cancelRequestWithURL:(NetWorkRequestUrl )url {
++ (void)cancelRequestWithURL:(NetWorkRequestUrl)url {
     NSString *urlString = [NetWorkUrlConfig urlString:url];
     @synchronized(self) {
         [[self allTasks] enumerateObjectsUsingBlock:^(NSURLSessionDataTask * _Nonnull task, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -108,6 +112,20 @@ static NSMutableArray *requestTasks;
     manager.requestSerializer.timeoutInterval = kNetworkingTimeoutSeconds;
     
     return manager;
+}
+
+- (void)getUrl:(NetWorkRequestUrl)url
+    parameters:(NSDictionary *)parameters
+     className:(NSString *)className
+ responseBlock:(ResponseBlock)responseBlock{
+    [self requestWithUrl:url parameters:parameters httpMethod:NetWorkRequestTypeGet className:className responseBlock:responseBlock];
+}
+
+- (void)postUrl:(NetWorkRequestUrl)url
+    parameters:(NSDictionary *)parameters
+     className:(NSString *)className
+ responseBlock:(ResponseBlock)responseBlock{
+    [self requestWithUrl:url parameters:parameters httpMethod:NetWorkRequestTypePost className:className responseBlock:responseBlock];
 }
 
 - (void)requestWithUrl:(NetWorkRequestUrl)url

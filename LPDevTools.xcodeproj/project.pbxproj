@@ -48,6 +48,7 @@
 		1847FF191DD44A6700A4339B /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847FEFD1DD44A6600A4339B /* UIView+ViewController.m */; };
 		1847FF1A1DD44A6700A4339B /* NetWorkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847FF011DD44A6600A4339B /* NetWorkRequest.m */; };
 		1847FF1B1DD44A6700A4339B /* NetWorkUrlConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847FF031DD44A6600A4339B /* NetWorkUrlConfig.m */; };
+		1847FF1F1DD46CD100A4339B /* LPTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847FF1E1DD46CD100A4339B /* LPTestModel.m */; };
 		1851618C1DB772CD00FD1576 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851618B1DB772CD00FD1576 /* main.m */; };
 		185161971DB772CE00FD1576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185161961DB772CE00FD1576 /* Assets.xcassets */; };
 		1851619A1DB772CE00FD1576 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185161981DB772CE00FD1576 /* LaunchScreen.storyboard */; };
@@ -159,6 +160,8 @@
 		1847FF021DD44A6600A4339B /* NetWorkUrlConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkUrlConfig.h; sourceTree = "<group>"; };
 		1847FF031DD44A6600A4339B /* NetWorkUrlConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkUrlConfig.m; sourceTree = "<group>"; };
 		1847FF1C1DD4628300A4339B /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		1847FF1D1DD46CD100A4339B /* LPTestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTestModel.h; sourceTree = "<group>"; };
+		1847FF1E1DD46CD100A4339B /* LPTestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTestModel.m; sourceTree = "<group>"; };
 		185161871DB772CD00FD1576 /* LPDevTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LPDevTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1851618B1DB772CD00FD1576 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		185161961DB772CE00FD1576 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -458,6 +461,8 @@
 		185161B61DB77E6A00FD1576 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1847FF1D1DD46CD100A4339B /* LPTestModel.h */,
+				1847FF1E1DD46CD100A4339B /* LPTestModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -654,6 +659,7 @@
 				1847FEC71DD44A5800A4339B /* _JZValue.m in Sources */,
 				1847FF191DD44A6700A4339B /* UIView+ViewController.m in Sources */,
 				1847FEC41DD44A5800A4339B /* CYLTabBarController.m in Sources */,
+				1847FF1F1DD46CD100A4339B /* LPTestModel.m in Sources */,
 				1847FF081DD44A6600A4339B /* NSTimer+Block.m in Sources */,
 				18797D5D1DB855DB00AB093E /* LPTabBarController.m in Sources */,
 				1847FF181DD44A6700A4339B /* UIView+Shake.m in Sources */,
