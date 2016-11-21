@@ -15,7 +15,7 @@
 @property (assign, nonatomic) NetWorkRequestType requestType;
 @property (strong, nonatomic) NSDictionary *params;//请求参数
 @property (copy, nonatomic) NSString *className;//模型类名
-@property (assign, nonatomic) BOOL useCache;
+//@property (assign, nonatomic) BOOL useCache;
 
 - (instancetype)initWithUrl:(NetWorkRequestUrl)url
                      params:(NSDictionary *)params;

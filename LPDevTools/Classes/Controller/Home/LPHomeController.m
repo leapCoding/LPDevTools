@@ -9,6 +9,7 @@
 #import "LPHomeController.h"
 #import "LPSecondViewController.h"
 #import "LPTestModel.h"
+#import "UIView+EAFeatureGuideView.h"
 
 @interface LPHomeController ()
 
@@ -42,6 +43,14 @@
                                                                                            @"PageIndex":@"1"} className:NSStringFromClass([LPTestModel class]) responseBlock:^(NetWorkResponse *response) {
                                                                                                
                                                                                            }];
+    
+    EAFeatureItem *itm = [[EAFeatureItem alloc]initWithFocusRect:CGRectMake(0, 100, 100, 100) focusCornerRadius:50 focusInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    itm.actionTitle = @"ddsds";
+    itm.action = ^(id sender){
+        
+    };
+    EAFeatureItem *itm1 = [[EAFeatureItem alloc]initWithFocusRect:CGRectMake(0, 300, 100, 100) focusCornerRadius:50 focusInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    [self.view showWithFeatureItems:@[itm,itm1] saveKeyName:@"lp" inVersion:@"1.0"];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

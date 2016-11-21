@@ -169,7 +169,7 @@ static NSMutableArray *requestTasks;
                 response = [[NetWorkResponse alloc] initWithResult:responseObject request:request];
             }
             responseBlock(response);
-            
+            task.taskDescription = NSStringFromClass([UIViewController class]);
             [[NetWorkUrlConfig allTasks] removeObject:task];
         }
     }];

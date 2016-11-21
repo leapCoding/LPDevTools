@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180388DF1DE2C658006182C6 /* NetWorkAspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 180388DE1DE2C658006182C6 /* NetWorkAspects.m */; };
 		182B19E31DC089E500C8DDE3 /* LPTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19E21DC089E500C8DDE3 /* LPTabBarControllerConfig.m */; };
 		182B19E61DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19E51DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m */; };
 		182B19E91DC0A47F00C8DDE3 /* LPSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19E81DC0A47F00C8DDE3 /* LPSecondViewController.m */; };
@@ -71,6 +72,8 @@
 
 /* Begin PBXFileReference section */
 		12AAC40FC49DA0ED1361DCF5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		180388DD1DE2C658006182C6 /* NetWorkAspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkAspects.h; sourceTree = "<group>"; };
+		180388DE1DE2C658006182C6 /* NetWorkAspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkAspects.m; sourceTree = "<group>"; };
 		182B19E11DC089E500C8DDE3 /* LPTabBarControllerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTabBarControllerConfig.h; sourceTree = "<group>"; };
 		182B19E21DC089E500C8DDE3 /* LPTabBarControllerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTabBarControllerConfig.m; sourceTree = "<group>"; };
 		182B19E41DC0944D00C8DDE3 /* CYLPlusButtonSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLPlusButtonSubclass.h; sourceTree = "<group>"; };
@@ -355,6 +358,8 @@
 				1847FF011DD44A6600A4339B /* NetWorkRequest.m */,
 				1847FF021DD44A6600A4339B /* NetWorkUrlConfig.h */,
 				1847FF031DD44A6600A4339B /* NetWorkUrlConfig.m */,
+				180388DD1DE2C658006182C6 /* NetWorkAspects.h */,
+				180388DE1DE2C658006182C6 /* NetWorkAspects.m */,
 			);
 			path = NetWorkManager;
 			sourceTree = "<group>";
@@ -661,6 +666,7 @@
 				1847FEC41DD44A5800A4339B /* CYLTabBarController.m in Sources */,
 				1847FF1F1DD46CD100A4339B /* LPTestModel.m in Sources */,
 				1847FF081DD44A6600A4339B /* NSTimer+Block.m in Sources */,
+				180388DF1DE2C658006182C6 /* NetWorkAspects.m in Sources */,
 				18797D5D1DB855DB00AB093E /* LPTabBarController.m in Sources */,
 				1847FF181DD44A6700A4339B /* UIView+Shake.m in Sources */,
 				1847FF151DD44A6600A4339B /* UIView+Nib.m in Sources */,
