@@ -180,6 +180,7 @@
 		18797D5E1DB8562500AB093E /* LPHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPHomeController.h; sourceTree = "<group>"; };
 		18797D5F1DB8562500AB093E /* LPHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPHomeController.m; sourceTree = "<group>"; };
 		18797D611DB8755800AB093E /* LPDevToolsPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPDevToolsPrefix.pch; sourceTree = "<group>"; };
+		1890F1A11DE445DF00184637 /* CommonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
 		19FA793E4615451F47FF1328 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67A8C00164664CFF0BA8C84 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -278,6 +279,7 @@
 				1847FECE1DD44A6600A4339B /* Category */,
 				1847FEFF1DD44A6600A4339B /* NetWorkManager */,
 				1847FF1C1DD4628300A4339B /* Macros.h */,
+				1890F1A11DE445DF00184637 /* CommonMacro.h */,
 			);
 			path = Util;
 			sourceTree = "<group>";
