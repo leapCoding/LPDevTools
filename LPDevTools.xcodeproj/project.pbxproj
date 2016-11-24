@@ -11,6 +11,8 @@
 		182B19E31DC089E500C8DDE3 /* LPTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19E21DC089E500C8DDE3 /* LPTabBarControllerConfig.m */; };
 		182B19E61DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19E51DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m */; };
 		182B19E91DC0A47F00C8DDE3 /* LPSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19E81DC0A47F00C8DDE3 /* LPSecondViewController.m */; };
+		183D652E1DE57DCC00AF55E8 /* UIView+AFCLodingBlank.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D652D1DE57DCC00AF55E8 /* UIView+AFCLodingBlank.m */; };
+		183D65311DE57F4200AF55E8 /* NSDictionary+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D65301DE57F4200AF55E8 /* NSDictionary+SafeAccess.m */; };
 		183F6D0D1DBA134F009F91F4 /* LPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183F6D0C1DBA134F009F91F4 /* LPNavigationController.m */; };
 		1847FEC01DD44A5800A4339B /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847FEA01DD44A5800A4339B /* Aspects.m */; };
 		1847FEC11DD44A5800A4339B /* LPAspectsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847FEA21DD44A5800A4339B /* LPAspectsConfig.m */; };
@@ -57,7 +59,7 @@
 		185161B21DB77D4F00FD1576 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185161B11DB77D4F00FD1576 /* AppDelegate.m */; };
 		18797D5D1DB855DB00AB093E /* LPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18797D5C1DB855DB00AB093E /* LPTabBarController.m */; };
 		18797D601DB8562500AB093E /* LPHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18797D5F1DB8562500AB093E /* LPHomeController.m */; };
-		B5EEF19822EC0A84BA321E0D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FA793E4615451F47FF1328 /* libPods.a */; };
+		CF604012695402B68CFD6C1B /* libPods-LPDevTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D595416016D0870177CCC8 /* libPods-LPDevTools.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		12AAC40FC49DA0ED1361DCF5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1372F38191AE2E389061DE59 /* Pods-LPDevTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPDevTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LPDevTools/Pods-LPDevTools.debug.xcconfig"; sourceTree = "<group>"; };
 		180388DD1DE2C658006182C6 /* NetWorkAspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkAspects.h; sourceTree = "<group>"; };
 		180388DE1DE2C658006182C6 /* NetWorkAspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkAspects.m; sourceTree = "<group>"; };
 		182B19E11DC089E500C8DDE3 /* LPTabBarControllerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTabBarControllerConfig.h; sourceTree = "<group>"; };
@@ -80,6 +82,10 @@
 		182B19E51DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLPlusButtonSubclass.m; sourceTree = "<group>"; };
 		182B19E71DC0A47F00C8DDE3 /* LPSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPSecondViewController.h; sourceTree = "<group>"; };
 		182B19E81DC0A47F00C8DDE3 /* LPSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPSecondViewController.m; sourceTree = "<group>"; };
+		183D652C1DE57DCC00AF55E8 /* UIView+AFCLodingBlank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AFCLodingBlank.h"; sourceTree = "<group>"; };
+		183D652D1DE57DCC00AF55E8 /* UIView+AFCLodingBlank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AFCLodingBlank.m"; sourceTree = "<group>"; };
+		183D652F1DE57F4200AF55E8 /* NSDictionary+SafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeAccess.h"; sourceTree = "<group>"; };
+		183D65301DE57F4200AF55E8 /* NSDictionary+SafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeAccess.m"; sourceTree = "<group>"; };
 		183F6D0B1DBA134F009F91F4 /* LPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNavigationController.h; sourceTree = "<group>"; };
 		183F6D0C1DBA134F009F91F4 /* LPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNavigationController.m; sourceTree = "<group>"; };
 		1847FE9F1DD44A5800A4339B /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
@@ -181,8 +187,8 @@
 		18797D5F1DB8562500AB093E /* LPHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPHomeController.m; sourceTree = "<group>"; };
 		18797D611DB8755800AB093E /* LPDevToolsPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPDevToolsPrefix.pch; sourceTree = "<group>"; };
 		1890F1A11DE445DF00184637 /* CommonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
-		19FA793E4615451F47FF1328 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B67A8C00164664CFF0BA8C84 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		44BE1BFBDCFCD4CD0BBDA9D3 /* Pods-LPDevTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPDevTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-LPDevTools/Pods-LPDevTools.release.xcconfig"; sourceTree = "<group>"; };
+		59D595416016D0870177CCC8 /* libPods-LPDevTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LPDevTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5EEF19822EC0A84BA321E0D /* libPods.a in Frameworks */,
+				CF604012695402B68CFD6C1B /* libPods-LPDevTools.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +296,8 @@
 				1847FECF1DD44A6600A4339B /* Categorys.h */,
 				1847FED01DD44A6600A4339B /* CLLocation+YCLocation.h */,
 				1847FED11DD44A6600A4339B /* CLLocation+YCLocation.m */,
+				183D652F1DE57F4200AF55E8 /* NSDictionary+SafeAccess.h */,
+				183D65301DE57F4200AF55E8 /* NSDictionary+SafeAccess.m */,
 				1847FED21DD44A6600A4339B /* NSArray+SafeAccess.h */,
 				1847FED31DD44A6600A4339B /* NSArray+SafeAccess.m */,
 				1847FED41DD44A6600A4339B /* NSMutableArray+SafeAccess.h */,
@@ -302,6 +310,8 @@
 				1847FEDB1DD44A6600A4339B /* UIBarButtonItem+Badge.m */,
 				1847FEDC1DD44A6600A4339B /* UIButton+Badge.h */,
 				1847FEDD1DD44A6600A4339B /* UIButton+Badge.m */,
+				183D652C1DE57DCC00AF55E8 /* UIView+AFCLodingBlank.h */,
+				183D652D1DE57DCC00AF55E8 /* UIView+AFCLodingBlank.m */,
 				1847FEDE1DD44A6600A4339B /* UIView */,
 			);
 			path = Category;
@@ -372,8 +382,8 @@
 				185161891DB772CD00FD1576 /* LPDevTools */,
 				185161A31DB772CE00FD1576 /* LPDevToolsTests */,
 				185161881DB772CD00FD1576 /* Products */,
-				811DB37410885B1622CB82D7 /* Pods */,
-				D9E78200E278D7FE193024D3 /* Frameworks */,
+				6479FE383D240AC2A6D0A2B9 /* Pods */,
+				7500FE0268E87042504F51D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -481,19 +491,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		811DB37410885B1622CB82D7 /* Pods */ = {
+		6479FE383D240AC2A6D0A2B9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B67A8C00164664CFF0BA8C84 /* Pods.debug.xcconfig */,
-				12AAC40FC49DA0ED1361DCF5 /* Pods.release.xcconfig */,
+				1372F38191AE2E389061DE59 /* Pods-LPDevTools.debug.xcconfig */,
+				44BE1BFBDCFCD4CD0BBDA9D3 /* Pods-LPDevTools.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D9E78200E278D7FE193024D3 /* Frameworks */ = {
+		7500FE0268E87042504F51D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				19FA793E4615451F47FF1328 /* libPods.a */,
+				59D595416016D0870177CCC8 /* libPods-LPDevTools.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -505,12 +515,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 185161A91DB772CE00FD1576 /* Build configuration list for PBXNativeTarget "LPDevTools" */;
 			buildPhases = (
-				A01E189881E32BEF125083AB /* Check Pods Manifest.lock */,
+				98FD12AA7B1E26F652DC4F2F /* [CP] Check Pods Manifest.lock */,
 				185161831DB772CD00FD1576 /* Sources */,
 				185161841DB772CD00FD1576 /* Frameworks */,
 				185161851DB772CD00FD1576 /* Resources */,
-				4C9F53A1627E89B0F4CAF65B /* Embed Pods Frameworks */,
-				47947C1087801D3A8A905739 /* Copy Pods Resources */,
+				F6F2A63FF322E0C6B6B95414 /* [CP] Embed Pods Frameworks */,
+				046205A39F24064A4586D04C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -551,6 +561,7 @@
 				TargetAttributes = {
 					185161861DB772CD00FD1576 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = VW6B7929D2;
 						ProvisioningStyle = Automatic;
 					};
 					1851619F1DB772CE00FD1576 = {
@@ -599,49 +610,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		47947C1087801D3A8A905739 /* Copy Pods Resources */ = {
+		046205A39F24064A4586D04C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LPDevTools/Pods-LPDevTools-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4C9F53A1627E89B0F4CAF65B /* Embed Pods Frameworks */ = {
+		98FD12AA7B1E26F652DC4F2F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A01E189881E32BEF125083AB /* Check Pods Manifest.lock */ = {
+		F6F2A63FF322E0C6B6B95414 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LPDevTools/Pods-LPDevTools-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -667,11 +678,13 @@
 				1847FF191DD44A6700A4339B /* UIView+ViewController.m in Sources */,
 				1847FEC41DD44A5800A4339B /* CYLTabBarController.m in Sources */,
 				1847FF1F1DD46CD100A4339B /* LPTestModel.m in Sources */,
+				183D65311DE57F4200AF55E8 /* NSDictionary+SafeAccess.m in Sources */,
 				1847FF081DD44A6600A4339B /* NSTimer+Block.m in Sources */,
 				180388DF1DE2C658006182C6 /* NetWorkAspects.m in Sources */,
 				18797D5D1DB855DB00AB093E /* LPTabBarController.m in Sources */,
 				1847FF181DD44A6700A4339B /* UIView+Shake.m in Sources */,
 				1847FF151DD44A6600A4339B /* UIView+Nib.m in Sources */,
+				183D652E1DE57DCC00AF55E8 /* UIView+AFCLodingBlank.m in Sources */,
 				1847FECB1DD44A5800A4339B /* UINavigationController+JZExtension.m in Sources */,
 				1847FEC61DD44A5800A4339B /* _JZNavigationInteractiveTransition.m in Sources */,
 				1847FF051DD44A6600A4339B /* NSArray+SafeAccess.m in Sources */,
@@ -821,9 +834,10 @@
 		};
 		185161AA1DB772CE00FD1576 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B67A8C00164664CFF0BA8C84 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 1372F38191AE2E389061DE59 /* Pods-LPDevTools.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VW6B7929D2;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = /Users/apple/Desktop/github/LPDevTools/LPDevTools/LPDevToolsPrefix.pch;
 				INFOPLIST_FILE = LPDevTools/Info.plist;
@@ -835,9 +849,10 @@
 		};
 		185161AB1DB772CE00FD1576 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12AAC40FC49DA0ED1361DCF5 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 44BE1BFBDCFCD4CD0BBDA9D3 /* Pods-LPDevTools.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VW6B7929D2;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = /Users/apple/Desktop/github/LPDevTools/LPDevTools/LPDevToolsPrefix.pch;
 				INFOPLIST_FILE = LPDevTools/Info.plist;

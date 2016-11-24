@@ -13,5 +13,6 @@
 #import "NSArray+SafeAccess.h"
 #import "NSMutableArray+SafeAccess.h"
 #import "UIViewHeader.h"
+#import "UIView+AFCLodingBlank.h"
 
 #endif /* Categorys_h */

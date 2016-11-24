@@ -9,11 +9,18 @@
 #ifndef LPDevToolsPrefix_pch
 #define LPDevToolsPrefix_pch
 
+#ifdef __OBJC__
+
+#import "Masonry.h"
+#import "MJExtension.h"
+
 #import "Macros.h"
 #import "NetWorkUrlConfig.h"
 
 #import "Vendors.h"
 
 #import "Categorys.h"
+
+#endif
 
 #endif /* LPDevToolsPrefix_pch */
