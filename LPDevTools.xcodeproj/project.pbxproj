@@ -42,7 +42,6 @@
 		1847FF101DD44A6600A4339B /* UIView+Find.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847FEEB1DD44A6600A4339B /* UIView+Find.m */; };
 		1847FF111DD44A6600A4339B /* UIView+GestureCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847FEED1DD44A6600A4339B /* UIView+GestureCallback.m */; };
 		1847FF121DD44A6600A4339B /* UIView+GlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847FEEF1DD44A6600A4339B /* UIView+GlowView.m */; };
-		1847FF131DD44A6600A4339B /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847FEF11DD44A6600A4339B /* UIView+HUD.m */; };
 		1847FF141DD44A6600A4339B /* UIView+MAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847FEF31DD44A6600A4339B /* UIView+MAC.m */; };
 		1847FF151DD44A6600A4339B /* UIView+Nib.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847FEF51DD44A6600A4339B /* UIView+Nib.m */; };
 		1847FF161DD44A6600A4339B /* UIView+RecursiveDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847FEF71DD44A6600A4339B /* UIView+RecursiveDescription.m */; };
@@ -57,6 +56,7 @@
 		1851619A1DB772CE00FD1576 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185161981DB772CE00FD1576 /* LaunchScreen.storyboard */; };
 		185161A51DB772CE00FD1576 /* LPDevToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 185161A41DB772CE00FD1576 /* LPDevToolsTests.m */; };
 		185161B21DB77D4F00FD1576 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185161B11DB77D4F00FD1576 /* AppDelegate.m */; };
+		186FCE681DE7D18F005E717E /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 186FCE671DE7D18F005E717E /* UIView+HUD.m */; };
 		18797D5D1DB855DB00AB093E /* LPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18797D5C1DB855DB00AB093E /* LPTabBarController.m */; };
 		18797D601DB8562500AB093E /* LPHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18797D5F1DB8562500AB093E /* LPHomeController.m */; };
 		CF604012695402B68CFD6C1B /* libPods-LPDevTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D595416016D0870177CCC8 /* libPods-LPDevTools.a */; };
@@ -149,8 +149,6 @@
 		1847FEED1DD44A6600A4339B /* UIView+GestureCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GestureCallback.m"; sourceTree = "<group>"; };
 		1847FEEE1DD44A6600A4339B /* UIView+GlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GlowView.h"; sourceTree = "<group>"; };
 		1847FEEF1DD44A6600A4339B /* UIView+GlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GlowView.m"; sourceTree = "<group>"; };
-		1847FEF01DD44A6600A4339B /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
-		1847FEF11DD44A6600A4339B /* UIView+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HUD.m"; sourceTree = "<group>"; };
 		1847FEF21DD44A6600A4339B /* UIView+MAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MAC.h"; sourceTree = "<group>"; };
 		1847FEF31DD44A6600A4339B /* UIView+MAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MAC.m"; sourceTree = "<group>"; };
 		1847FEF41DD44A6600A4339B /* UIView+Nib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Nib.h"; sourceTree = "<group>"; };
@@ -181,6 +179,8 @@
 		185161A61DB772CE00FD1576 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		185161B01DB77D4F00FD1576 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		185161B11DB77D4F00FD1576 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		186FCE661DE7D18F005E717E /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
+		186FCE671DE7D18F005E717E /* UIView+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HUD.m"; sourceTree = "<group>"; };
 		18797D5B1DB855DB00AB093E /* LPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTabBarController.h; sourceTree = "<group>"; };
 		18797D5C1DB855DB00AB093E /* LPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTabBarController.m; sourceTree = "<group>"; };
 		18797D5E1DB8562500AB093E /* LPHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPHomeController.h; sourceTree = "<group>"; };
@@ -313,6 +313,8 @@
 				183D652C1DE57DCC00AF55E8 /* UIView+AFCLodingBlank.h */,
 				183D652D1DE57DCC00AF55E8 /* UIView+AFCLodingBlank.m */,
 				1847FEDE1DD44A6600A4339B /* UIView */,
+				186FCE661DE7D18F005E717E /* UIView+HUD.h */,
+				186FCE671DE7D18F005E717E /* UIView+HUD.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -333,8 +335,6 @@
 				1847FEED1DD44A6600A4339B /* UIView+GestureCallback.m */,
 				1847FEEE1DD44A6600A4339B /* UIView+GlowView.h */,
 				1847FEEF1DD44A6600A4339B /* UIView+GlowView.m */,
-				1847FEF01DD44A6600A4339B /* UIView+HUD.h */,
-				1847FEF11DD44A6600A4339B /* UIView+HUD.m */,
 				1847FEF21DD44A6600A4339B /* UIView+MAC.h */,
 				1847FEF31DD44A6600A4339B /* UIView+MAC.m */,
 				1847FEF41DD44A6600A4339B /* UIView+Nib.h */,
@@ -664,6 +664,7 @@
 			files = (
 				1847FF161DD44A6600A4339B /* UIView+RecursiveDescription.m in Sources */,
 				182B19E61DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m in Sources */,
+				186FCE681DE7D18F005E717E /* UIView+HUD.m in Sources */,
 				1847FF1B1DD44A6700A4339B /* NetWorkUrlConfig.m in Sources */,
 				1847FF0C1DD44A6600A4339B /* UIView+EAFeatureGuideView.m in Sources */,
 				1847FF111DD44A6600A4339B /* UIView+GestureCallback.m in Sources */,
@@ -673,7 +674,6 @@
 				1847FF141DD44A6600A4339B /* UIView+MAC.m in Sources */,
 				1851618C1DB772CD00FD1576 /* main.m in Sources */,
 				183F6D0D1DBA134F009F91F4 /* LPNavigationController.m in Sources */,
-				1847FF131DD44A6600A4339B /* UIView+HUD.m in Sources */,
 				1847FEC71DD44A5800A4339B /* _JZValue.m in Sources */,
 				1847FF191DD44A6700A4339B /* UIView+ViewController.m in Sources */,
 				1847FEC41DD44A5800A4339B /* CYLTabBarController.m in Sources */,

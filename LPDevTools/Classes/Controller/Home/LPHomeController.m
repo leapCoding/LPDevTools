@@ -50,7 +50,10 @@
         
     };
     EAFeatureItem *itm1 = [[EAFeatureItem alloc]initWithFocusRect:CGRectMake(0, 300, 100, 100) focusCornerRadius:50 focusInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-    [self.view showWithFeatureItems:@[itm,itm1] saveKeyName:@"lp" inVersion:@"1.0"];
+//    [self.view showWithFeatureItems:@[itm,itm1] saveKeyName:@"lp" inVersion:@"1.0"];
+    
+//    [self.view showLoadHUD];
+    [self.view showLoadHUDTitle:@"加载中..."];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
