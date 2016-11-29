@@ -22,6 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    self.navigationController.jz_navigationBarBackgroundAlpha = 0;
+    self.title =  [NSString stringWithFormat:@"Screen-%d", self.navigationController.viewControllers.count];
     NSArray *ass = @[];
 //    NSString *ss = [ass objectAtIndex:2];
 //    NSLog(@"---------------%@",ass[1]);
@@ -33,9 +34,9 @@
 //    view.glowColor = [UIColor blackColor];
 //    [view startGlowLoop];
     
-    self.view.blurTintColor = [UIColor blueColor];
-    self.view.blurStyle = UIViewBlurDarkStyle;
-    [self.view enableBlur:YES];
+//    self.view.blurTintColor = [UIColor blueColor];
+//    self.view.blurStyle = UIViewBlurDarkStyle;
+//    [self.view enableBlur:YES];
     
 //    [[NetWorkUrlConfig sharedManager]getUrl:NetWorkRequestUrl_QueryProjectList parameters:@{@"MemberId":@"",
 //                                                                                           @"Category":@"",
@@ -54,7 +55,16 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self.navigationController pushViewController:[[LPSecondViewController alloc]init] animated:YES];
+    [self.navigationController pushViewController:[[LPHomeController alloc]init] animated:YES];
+}
+
+-(BOOL) navigationShouldPopOnBackButton ///在这个方法里写返回按钮的事件处理
+{
+    
+    //这里写要处理的代码
+    [self.navigationController popViewControllerAnimated:YES];
+    return YES;//返回NO 不会执行
+    
 }
 
 - (void)didReceiveMemoryWarning {

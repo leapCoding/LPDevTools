@@ -18,9 +18,17 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blueColor];
     // Do any additional setup after loading the view.
-    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+//    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    NSLog(@"%@",self.navigationController.viewControllers);
     
 }
+
+- (BOOL)navigationShouldPopOnBackButton {
+    NSLog(@"------%@",NSStringFromClass([self class]));
+    [self.navigationController popViewControllerAnimated:YES];
+    return YES;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

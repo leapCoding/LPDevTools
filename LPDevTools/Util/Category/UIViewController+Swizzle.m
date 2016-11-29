@@ -71,10 +71,10 @@
 
 - (void)customViewWillDisappear:(BOOL)animated{
 //    返回按钮
-    if (!self.navigationItem.backBarButtonItem
-        && self.navigationController.viewControllers.count > 1) {//设置返回按钮(backBarButtonItem的图片不能设置；如果用leftBarButtonItem属性，则iOS7自带的滑动返回功能会失效)
-        self.navigationItem.backBarButtonItem = [self backButton];
-    }
+//    if (!self.navigationItem.backBarButtonItem
+//        && self.navigationController.viewControllers.count > 1) {//设置返回按钮(backBarButtonItem的图片不能设置；如果用leftBarButtonItem属性，则iOS7自带的滑动返回功能会失效)
+//        self.navigationItem.backBarButtonItem = [self backButton];
+//    }
     [self customViewWillDisappear:animated];
 }
 
