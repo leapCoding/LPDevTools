@@ -16,10 +16,12 @@
 }
 
 - (void)showLoadHUDTitle:(NSString *)string {
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
-    hud.contentColor = [UIColor whiteColor];
-    hud.bezelView.color = [[UIColor blackColor]colorWithAlphaComponent:0.9];
-    hud.label.text = string;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
+        hud.contentColor = [UIColor whiteColor];
+        hud.bezelView.color = [[UIColor blackColor]colorWithAlphaComponent:0.9];
+        hud.label.text = string;
+    });
 }
 
 - (void)showTip:(NSString *)string {

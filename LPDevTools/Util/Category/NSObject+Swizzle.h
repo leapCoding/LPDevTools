@@ -21,4 +21,6 @@
  */
 + (BOOL)swizzleMethod:(SEL)originalSelector withMethod:(SEL)swizzledSelector error:(NSError **)error;
 
++ (id)changeType:(id)myObj;
+
 @end

@@ -14,5 +14,6 @@
 #import "NSMutableArray+SafeAccess.h"
 #import "UIViewHeader.h"
 #import "UIView+AFCLodingBlank.h"
+#import "NSDateHeader.h"
 
 #endif /* Categorys_h */

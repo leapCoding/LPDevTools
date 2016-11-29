@@ -10,6 +10,7 @@
 #import "LPSecondViewController.h"
 #import "LPTestModel.h"
 #import "UIView+EAFeatureGuideView.h"
+#import "MBProgressHUD.h"
 
 @interface LPHomeController ()
 
@@ -29,31 +30,27 @@
     [self.view addSubview:view];
 //    [view createGlowLayer];
 //    [view insertGlowLayer];
-    view.glowColor = [UIColor blackColor];
+//    view.glowColor = [UIColor blackColor];
 //    [view startGlowLoop];
     
-    view.blurTintColor = [UIColor yellowColor];
-    view.blurStyle = UIViewBlurDarkStyle;
-    [view enableBlur:YES];
+    self.view.blurTintColor = [UIColor blueColor];
+    self.view.blurStyle = UIViewBlurDarkStyle;
+    [self.view enableBlur:YES];
     
-    [[NetWorkUrlConfig sharedManager]getUrl:NetWorkRequestUrl_QueryProjectList parameters:@{@"MemberId":@"",
-                                                                                           @"Category":@"",
-                                                                                           @"Status":@"",
-                                                                                           @"PageSize":@"10",
-                                                                                           @"PageIndex":@"1"} className:NSStringFromClass([LPTestModel class]) responseBlock:^(NetWorkResponse *response) {
-                                                                                               
-                                                                                           }];
+//    [[NetWorkUrlConfig sharedManager]getUrl:NetWorkRequestUrl_QueryProjectList parameters:@{@"MemberId":@"",
+//                                                                                           @"Category":@"",
+//                                                                                           @"Status":@"",
+//                                                                                           @"PageSize":@"10",
+//                                                                                           @"PageIndex":@"1"} className:NSStringFromClass([LPTestModel class]) responseBlock:^(NetWorkResponse *response) {
+//                                                                                               
+//                                                                                           }];
     
-    EAFeatureItem *itm = [[EAFeatureItem alloc]initWithFocusRect:CGRectMake(0, 100, 100, 100) focusCornerRadius:50 focusInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-    itm.actionTitle = @"ddsds";
-    itm.action = ^(id sender){
-        
-    };
-    EAFeatureItem *itm1 = [[EAFeatureItem alloc]initWithFocusRect:CGRectMake(0, 300, 100, 100) focusCornerRadius:50 focusInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-//    [self.view showWithFeatureItems:@[itm,itm1] saveKeyName:@"lp" inVersion:@"1.0"];
+    NSTimeInterval time = [@"1480398973.020156" doubleValue];
+    DebugLog(@"----------%f,%@",[[NSDate date]timeIntervalSince1970],[NSDate dateWithTimeIntervalSince1970:time]);
     
 //    [self.view showLoadHUD];
-    [self.view showLoadHUDTitle:@"加载中..."];
+//    [self.view showLoadHUDTitle:@"加"];
+//    [self.view showTip:@"搜索"];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
