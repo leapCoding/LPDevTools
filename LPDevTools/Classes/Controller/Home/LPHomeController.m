@@ -55,16 +55,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self.navigationController pushViewController:[[LPHomeController alloc]init] animated:YES];
-}
-
--(BOOL) navigationShouldPopOnBackButton ///在这个方法里写返回按钮的事件处理
-{
-    
-    //这里写要处理的代码
-    [self.navigationController popViewControllerAnimated:YES];
-    return YES;//返回NO 不会执行
-    
+    [self.navigationController pushViewController:[[LPSecondViewController alloc]init] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

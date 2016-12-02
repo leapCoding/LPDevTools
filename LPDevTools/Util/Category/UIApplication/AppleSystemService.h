@@ -41,13 +41,6 @@
 + (void)sendEmailToAddress:(NSString *)address;
 
 /**
- *  app版本号
- *
- *  @return app版本号
- */
-+ (NSString *)appVersion;
-
-/**
  *  获取启动页图片
  *
  *  @return 启动页图片

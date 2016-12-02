@@ -102,8 +102,6 @@ typedef void(^grantBlock)(BOOL granted);
 
 /**
  *  麦克风开启
- *
- *  @warning
  */
 - (void)applicationHasAccessToMicrophone:(grantBlock)flag;
 

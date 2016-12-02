@@ -12,7 +12,6 @@
 		182B19E61DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19E51DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m */; };
 		182B19E91DC0A47F00C8DDE3 /* LPSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19E81DC0A47F00C8DDE3 /* LPSecondViewController.m */; };
 		183D652E1DE57DCC00AF55E8 /* UIView+AFCLodingBlank.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D652D1DE57DCC00AF55E8 /* UIView+AFCLodingBlank.m */; };
-		183D65311DE57F4200AF55E8 /* NSDictionary+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 183D65301DE57F4200AF55E8 /* NSDictionary+SafeAccess.m */; };
 		183F6D0D1DBA134F009F91F4 /* LPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183F6D0C1DBA134F009F91F4 /* LPNavigationController.m */; };
 		1847FEC01DD44A5800A4339B /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847FEA01DD44A5800A4339B /* Aspects.m */; };
 		1847FEC11DD44A5800A4339B /* LPAspectsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847FEA21DD44A5800A4339B /* LPAspectsConfig.m */; };
@@ -56,6 +55,7 @@
 		1851619A1DB772CE00FD1576 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185161981DB772CE00FD1576 /* LaunchScreen.storyboard */; };
 		185161A51DB772CE00FD1576 /* LPDevToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 185161A41DB772CE00FD1576 /* LPDevToolsTests.m */; };
 		185161B21DB77D4F00FD1576 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185161B11DB77D4F00FD1576 /* AppDelegate.m */; };
+		186F0B171DF00AE900923CF2 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 186F0B161DF00AE900923CF2 /* UIViewController+BackButtonHandler.m */; };
 		186FCE681DE7D18F005E717E /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 186FCE671DE7D18F005E717E /* UIView+HUD.m */; };
 		18797D5D1DB855DB00AB093E /* LPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18797D5C1DB855DB00AB093E /* LPTabBarController.m */; };
 		18797D601DB8562500AB093E /* LPHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18797D5F1DB8562500AB093E /* LPHomeController.m */; };
@@ -80,10 +80,11 @@
 		18822F711DED580900480568 /* NSUserDefaults+LPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 18822F6C1DED580900480568 /* NSUserDefaults+LPCategory.m */; };
 		18822F721DED580900480568 /* UIColor+LPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 18822F6E1DED580900480568 /* UIColor+LPCategory.m */; };
 		18822F731DED580900480568 /* UIDevice+LPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 18822F701DED580900480568 /* UIDevice+LPCategory.m */; };
-		18822F7A1DED586600480568 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 18822F751DED586600480568 /* UIViewController+BackButtonHandler.m */; };
 		18822F7B1DED586600480568 /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 18822F771DED586600480568 /* UIViewController+Category.m */; };
 		18822F7C1DED586700480568 /* UIViewController+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18822F791DED586600480568 /* UIViewController+Swizzle.m */; };
 		18822F801DED598300480568 /* ObjcRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 18822F7F1DED598300480568 /* ObjcRuntime.m */; };
+		1897A4241DF14AB100970A5B /* NSDictionary+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897A4231DF14AB100970A5B /* NSDictionary+SafeAccess.m */; };
+		1897A4271DF14ADC00970A5B /* NSDictionary+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897A4261DF14ADC00970A5B /* NSDictionary+Block.m */; };
 		CF604012695402B68CFD6C1B /* libPods-LPDevTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D595416016D0870177CCC8 /* libPods-LPDevTools.a */; };
 /* End PBXBuildFile section */
 
@@ -109,8 +110,6 @@
 		182B19E81DC0A47F00C8DDE3 /* LPSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPSecondViewController.m; sourceTree = "<group>"; };
 		183D652C1DE57DCC00AF55E8 /* UIView+AFCLodingBlank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AFCLodingBlank.h"; sourceTree = "<group>"; };
 		183D652D1DE57DCC00AF55E8 /* UIView+AFCLodingBlank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AFCLodingBlank.m"; sourceTree = "<group>"; };
-		183D652F1DE57F4200AF55E8 /* NSDictionary+SafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeAccess.h"; sourceTree = "<group>"; };
-		183D65301DE57F4200AF55E8 /* NSDictionary+SafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeAccess.m"; sourceTree = "<group>"; };
 		183F6D0B1DBA134F009F91F4 /* LPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNavigationController.h; sourceTree = "<group>"; };
 		183F6D0C1DBA134F009F91F4 /* LPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNavigationController.m; sourceTree = "<group>"; };
 		1847FE9F1DD44A5800A4339B /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
@@ -204,6 +203,8 @@
 		185161A61DB772CE00FD1576 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		185161B01DB77D4F00FD1576 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		185161B11DB77D4F00FD1576 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		186F0B151DF00AE900923CF2 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		186F0B161DF00AE900923CF2 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		186FCE661DE7D18F005E717E /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
 		186FCE671DE7D18F005E717E /* UIView+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HUD.m"; sourceTree = "<group>"; };
 		18797D5B1DB855DB00AB093E /* LPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTabBarController.h; sourceTree = "<group>"; };
@@ -255,8 +256,6 @@
 		18822F6E1DED580900480568 /* UIColor+LPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LPCategory.m"; sourceTree = "<group>"; };
 		18822F6F1DED580900480568 /* UIDevice+LPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+LPCategory.h"; sourceTree = "<group>"; };
 		18822F701DED580900480568 /* UIDevice+LPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+LPCategory.m"; sourceTree = "<group>"; };
-		18822F741DED586600480568 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
-		18822F751DED586600480568 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
 		18822F761DED586600480568 /* UIViewController+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Category.h"; sourceTree = "<group>"; };
 		18822F771DED586600480568 /* UIViewController+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Category.m"; sourceTree = "<group>"; };
 		18822F781DED586600480568 /* UIViewController+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzle.h"; sourceTree = "<group>"; };
@@ -264,6 +263,12 @@
 		18822F7E1DED598300480568 /* ObjcRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcRuntime.h; sourceTree = "<group>"; };
 		18822F7F1DED598300480568 /* ObjcRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcRuntime.m; sourceTree = "<group>"; };
 		1890F1A11DE445DF00184637 /* CommonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
+		1897A4221DF14AB100970A5B /* NSDictionary+SafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeAccess.h"; sourceTree = "<group>"; };
+		1897A4231DF14AB100970A5B /* NSDictionary+SafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeAccess.m"; sourceTree = "<group>"; };
+		1897A4251DF14ADC00970A5B /* NSDictionary+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Block.h"; sourceTree = "<group>"; };
+		1897A4261DF14ADC00970A5B /* NSDictionary+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Block.m"; sourceTree = "<group>"; };
+		1897A4281DF1545E00970A5B /* NSDictionaryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryHeader.h; sourceTree = "<group>"; };
+		1897A4291DF155A000970A5B /* UIApplicationHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIApplicationHeader.h; sourceTree = "<group>"; };
 		44BE1BFBDCFCD4CD0BBDA9D3 /* Pods-LPDevTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPDevTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-LPDevTools/Pods-LPDevTools.release.xcconfig"; sourceTree = "<group>"; };
 		59D595416016D0870177CCC8 /* libPods-LPDevTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LPDevTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -370,14 +375,15 @@
 		1847FECE1DD44A6600A4339B /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				1897A4201DF149C900970A5B /* NSDictionary */,
 				1847FECF1DD44A6600A4339B /* Categorys.h */,
 				18822F2E1DED1D9600480568 /* NSDate */,
 				1847FEDE1DD44A6600A4339B /* UIView */,
 				18822F391DED542600480568 /* NSString */,
 				18822F5B1DED550500480568 /* UIApplication */,
 				18822F7D1DED598300480568 /* ObjcRuntime */,
-				18822F741DED586600480568 /* UIViewController+BackButtonHandler.h */,
-				18822F751DED586600480568 /* UIViewController+BackButtonHandler.m */,
+				186F0B151DF00AE900923CF2 /* UIViewController+BackButtonHandler.h */,
+				186F0B161DF00AE900923CF2 /* UIViewController+BackButtonHandler.m */,
 				18822F761DED586600480568 /* UIViewController+Category.h */,
 				18822F771DED586600480568 /* UIViewController+Category.m */,
 				18822F781DED586600480568 /* UIViewController+Swizzle.h */,
@@ -398,8 +404,6 @@
 				18822F371DED529C00480568 /* NSObject+GCD.m */,
 				1847FED01DD44A6600A4339B /* CLLocation+YCLocation.h */,
 				1847FED11DD44A6600A4339B /* CLLocation+YCLocation.m */,
-				183D652F1DE57F4200AF55E8 /* NSDictionary+SafeAccess.h */,
-				183D65301DE57F4200AF55E8 /* NSDictionary+SafeAccess.m */,
 				1847FED21DD44A6600A4339B /* NSArray+SafeAccess.h */,
 				1847FED31DD44A6600A4339B /* NSArray+SafeAccess.m */,
 				1847FED41DD44A6600A4339B /* NSMutableArray+SafeAccess.h */,
@@ -655,6 +659,7 @@
 				18822F5D1DED550500480568 /* AppleSystemService.m */,
 				18822F5E1DED550500480568 /* UIApplication+AppInfo.h */,
 				18822F5F1DED550500480568 /* UIApplication+AppInfo.m */,
+				1897A4291DF155A000970A5B /* UIApplicationHeader.h */,
 			);
 			path = UIApplication;
 			sourceTree = "<group>";
@@ -666,6 +671,18 @@
 				18822F7F1DED598300480568 /* ObjcRuntime.m */,
 			);
 			path = ObjcRuntime;
+			sourceTree = "<group>";
+		};
+		1897A4201DF149C900970A5B /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				1897A4221DF14AB100970A5B /* NSDictionary+SafeAccess.h */,
+				1897A4231DF14AB100970A5B /* NSDictionary+SafeAccess.m */,
+				1897A4251DF14ADC00970A5B /* NSDictionary+Block.h */,
+				1897A4261DF14ADC00970A5B /* NSDictionary+Block.m */,
+				1897A4281DF1545E00970A5B /* NSDictionaryHeader.h */,
+			);
+			path = NSDictionary;
 			sourceTree = "<group>";
 		};
 		6479FE383D240AC2A6D0A2B9 /* Pods */ = {
@@ -840,6 +857,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1847FF161DD44A6600A4339B /* UIView+RecursiveDescription.m in Sources */,
+				1897A4241DF14AB100970A5B /* NSDictionary+SafeAccess.m in Sources */,
 				182B19E61DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m in Sources */,
 				186FCE681DE7D18F005E717E /* UIView+HUD.m in Sources */,
 				1847FF1B1DD44A6700A4339B /* NetWorkUrlConfig.m in Sources */,
@@ -857,7 +875,6 @@
 				183F6D0D1DBA134F009F91F4 /* LPNavigationController.m in Sources */,
 				18822F6A1DED57C600480568 /* UITextView+Placeholder.m in Sources */,
 				18822F7C1DED586700480568 /* UIViewController+Swizzle.m in Sources */,
-				18822F7A1DED586600480568 /* UIViewController+BackButtonHandler.m in Sources */,
 				1847FEC71DD44A5800A4339B /* _JZValue.m in Sources */,
 				18822F801DED598300480568 /* ObjcRuntime.m in Sources */,
 				1847FF191DD44A6700A4339B /* UIView+ViewController.m in Sources */,
@@ -866,7 +883,6 @@
 				1847FF1F1DD46CD100A4339B /* LPTestModel.m in Sources */,
 				18822F601DED550500480568 /* AppleSystemService.m in Sources */,
 				18822F341DED1D9600480568 /* NSDate+Mac.m in Sources */,
-				183D65311DE57F4200AF55E8 /* NSDictionary+SafeAccess.m in Sources */,
 				1847FF081DD44A6600A4339B /* NSTimer+Block.m in Sources */,
 				180388DF1DE2C658006182C6 /* NetWorkAspects.m in Sources */,
 				18822F541DED542600480568 /* NSString+MAC.m in Sources */,
@@ -887,9 +903,11 @@
 				1847FF0D1DD44A6600A4339B /* UIView+AnimationProperty.m in Sources */,
 				1847FECC1DD44A5800A4339B /* UIViewController+JZExtension.m in Sources */,
 				18797D601DB8562500AB093E /* LPHomeController.m in Sources */,
+				1897A4271DF14ADC00970A5B /* NSDictionary+Block.m in Sources */,
 				1847FF101DD44A6600A4339B /* UIView+Find.m in Sources */,
 				1847FF0A1DD44A6600A4339B /* UIButton+Badge.m in Sources */,
 				1847FF071DD44A6600A4339B /* NSObject+Swizzle.m in Sources */,
+				186F0B171DF00AE900923CF2 /* UIViewController+BackButtonHandler.m in Sources */,
 				1847FF171DD44A6600A4339B /* UIView+Screenshot.m in Sources */,
 				1847FEC91DD44A5800A4339B /* UINavigationBar+JZExtension.m in Sources */,
 				1847FF041DD44A6600A4339B /* CLLocation+YCLocation.m in Sources */,

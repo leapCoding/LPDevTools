@@ -15,6 +15,11 @@
 #import "UIViewHeader.h"
 #import "UIView+AFCLodingBlank.h"
 #import "NSDateHeader.h"
+#import "NSDictionaryHeader.h"
+#import "UIViewHeader.h"
+#import "NSStringHeader.h"
+#import "UIApplicationHeader.h"
+
 #import "UIViewController+BackButtonHandler.h"
 
 #endif /* Categorys_h */
