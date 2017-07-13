@@ -9,5 +9,9 @@ pod 'Masonry', '~> 1.0.2'
 pod 'MBProgressHUD', '~> 1.0.0'
 pod 'SDWebImage', '~> 3.7.5'
 pod 'MJRefresh', '~> 3.1.0'
+pod 'JPush'#极光推送
+pod 'YTKKeyValueStore'
+pod 'DZNEmptyDataSet'
+pod 'YYKit'
 
 end

@@ -9,7 +9,7 @@
 #import "LPHomeController.h"
 #import "LPSecondViewController.h"
 #import "LPTestModel.h"
-#import "UIView+EAFeatureGuideView.h"
+//#import "UIView+EAFeatureGuideView.h"
 #import "MBProgressHUD.h"
 
 @interface LPHomeController ()
@@ -47,7 +47,7 @@
 //                                                                                           }];
     
     NSTimeInterval time = [@"1480398973.020156" doubleValue];
-    DebugLog(@"----------%f,%@",[[NSDate date]timeIntervalSince1970],[NSDate dateWithTimeIntervalSince1970:time]);
+//    DebugLog(@"----------%f,%@",[[NSDate date]timeIntervalSince1970],[NSDate dateWithTimeIntervalSince1970:time]);
     
 //    [self.view showLoadHUD];
 //    [self.view showLoadHUDTitle:@"加"];

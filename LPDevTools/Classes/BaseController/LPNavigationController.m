@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.jz_navigationBarTransitionStyle = JZNavigationBarTransitionStyleDoppelganger;
+//    self.jz_navigationBarTransitionStyle = JZNavigationBarTransitionStyleDoppelganger;
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
