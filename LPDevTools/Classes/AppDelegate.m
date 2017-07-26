@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LPTabBarController.h"
 #import "LPTabBarControllerConfig.h"
+#import "LPLaunchImageAdView.h"
 
 @interface AppDelegate ()
 
@@ -24,9 +25,17 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     LPTabBarControllerConfig *tabBarControllerConfig = [[LPTabBarControllerConfig alloc] init];
-//    self.tabBarController = [[LPTabBarController alloc]init];
+    
     self.window.rootViewController = tabBarControllerConfig.tabBarController;
     [self.window makeKeyAndVisible];
+   
+    
+    [LPLaunchImageAdView makeLBLaunchImageAdView:^(LPLaunchImageAdView *imageAdView) {
+        imageAdView.clickBlock = ^(ClickType type) {
+            
+        };
+    }];
+
     
     return YES;
 }
