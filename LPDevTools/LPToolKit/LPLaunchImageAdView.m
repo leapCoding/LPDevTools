@@ -40,6 +40,8 @@ static NSString *const adImageName = @"adImageName";
 
 //ad广告数据请求
 + (void)loadAdImage {
+    
+    //暂时没有接口, 就用一个数组存了若干图片url, 每次随机取出一个
     NSArray *imageArray = @[@"http://imgsrc.baidu.com/forum/pic/item/9213b07eca80653846dc8fab97dda144ad348257.jpg", @"http://pic.paopaoche.net/up/2012-2/20122220201612322865.png", @"http://img5.pcpop.com/ArticleImages/picshow/0x0/20110801/2011080114495843125.jpg", @"http://www.mangowed.com/uploads/allimg/130410/1-130410215449417.jpg"];
     NSString *imageUrl = imageArray[arc4random() % imageArray.count];
     
