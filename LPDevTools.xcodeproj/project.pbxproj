@@ -517,6 +517,7 @@
 		E8D373A41F15CB270040B541 /* LPToolKit */ = {
 			isa = PBXGroup;
 			children = (
+				E8FE83661F2B06BC00E18C73 /* CustomView */,
 				E8D373A51F15CB270040B541 /* Category */,
 				E8D373CB1F15CB270040B541 /* LPCommonMacro.h */,
 				E8D373CC1F15CB270040B541 /* Manager */,
@@ -708,6 +709,13 @@
 			);
 			name = LPNetWorkManager;
 			path = LPToolKit/LPNetWorkManager;
+			sourceTree = "<group>";
+		};
+		E8FE83661F2B06BC00E18C73 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
