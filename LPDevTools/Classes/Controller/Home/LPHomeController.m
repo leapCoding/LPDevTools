@@ -11,6 +11,7 @@
 #import "LPTestModel.h"
 //#import "UIView+EAFeatureGuideView.h"
 #import "MBProgressHUD.h"
+#import "LPtestView.h"
 
 @interface LPHomeController ()
 
@@ -52,6 +53,12 @@
 //    [self.view showLoadHUD];
 //    [self.view showLoadHUDTitle:@"加"];
 //    [self.view showTip:@"搜索"];
+    
+    [self testDemo];
+}
+
+- (void)testDemo {
+    LPtestView *test = [[LPtestView alloc]initWithImageUrl:@""];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
