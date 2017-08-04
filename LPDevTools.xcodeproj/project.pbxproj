@@ -34,6 +34,10 @@
 		18797D5D1DB855DB00AB093E /* LPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18797D5C1DB855DB00AB093E /* LPTabBarController.m */; };
 		18797D601DB8562500AB093E /* LPHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18797D5F1DB8562500AB093E /* LPHomeController.m */; };
 		CF604012695402B68CFD6C1B /* libPods-LPDevTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D595416016D0870177CCC8 /* libPods-LPDevTools.a */; };
+		E802BAB81F2F1479000E8B4B /* LPPictureProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = E802BAB71F2F1479000E8B4B /* LPPictureProgress.m */; };
+		E802BAC11F3050C9000E8B4B /* LPPictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E802BAC01F3050C9000E8B4B /* LPPictureCollectionViewCell.m */; };
+		E802BACD1F30523E000E8B4B /* LPPictureBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E802BACC1F30523E000E8B4B /* LPPictureBrowser.m */; };
+		E802BAD01F3179ED000E8B4B /* LPPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = E802BACF1F3179ED000E8B4B /* LPPicture.m */; };
 		E8D373D51F15CB270040B541 /* NSArray+LPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D373A81F15CB270040B541 /* NSArray+LPTools.m */; };
 		E8D373D61F15CB270040B541 /* NSDate+LPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D373AA1F15CB270040B541 /* NSDate+LPTools.m */; };
 		E8D373D71F15CB270040B541 /* NSObject+LPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D373AC1F15CB270040B541 /* NSObject+LPTools.m */; };
@@ -163,6 +167,14 @@
 		18797D611DB8755800AB093E /* LPDevToolsPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPDevToolsPrefix.pch; sourceTree = "<group>"; };
 		44BE1BFBDCFCD4CD0BBDA9D3 /* Pods-LPDevTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPDevTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-LPDevTools/Pods-LPDevTools.release.xcconfig"; sourceTree = "<group>"; };
 		59D595416016D0870177CCC8 /* libPods-LPDevTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LPDevTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E802BAB61F2F1479000E8B4B /* LPPictureProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPictureProgress.h; sourceTree = "<group>"; };
+		E802BAB71F2F1479000E8B4B /* LPPictureProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPictureProgress.m; sourceTree = "<group>"; };
+		E802BABF1F3050C9000E8B4B /* LPPictureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPictureCollectionViewCell.h; sourceTree = "<group>"; };
+		E802BAC01F3050C9000E8B4B /* LPPictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPictureCollectionViewCell.m; sourceTree = "<group>"; };
+		E802BACB1F30523E000E8B4B /* LPPictureBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPictureBrowser.h; sourceTree = "<group>"; };
+		E802BACC1F30523E000E8B4B /* LPPictureBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPictureBrowser.m; sourceTree = "<group>"; };
+		E802BACE1F3179ED000E8B4B /* LPPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPicture.h; sourceTree = "<group>"; };
+		E802BACF1F3179ED000E8B4B /* LPPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPicture.m; sourceTree = "<group>"; };
 		E8D373A61F15CB270040B541 /* LPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPCategory.h; sourceTree = "<group>"; };
 		E8D373A71F15CB270040B541 /* NSArray+LPTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LPTools.h"; sourceTree = "<group>"; };
 		E8D373A81F15CB270040B541 /* NSArray+LPTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LPTools.m"; sourceTree = "<group>"; };
@@ -306,6 +318,14 @@
 			children = (
 				0C21C6861F2DD3A90089C5B8 /* LPtestView.h */,
 				0C21C6871F2DD3A90089C5B8 /* LPtestView.m */,
+				E802BAB61F2F1479000E8B4B /* LPPictureProgress.h */,
+				E802BAB71F2F1479000E8B4B /* LPPictureProgress.m */,
+				E802BABF1F3050C9000E8B4B /* LPPictureCollectionViewCell.h */,
+				E802BAC01F3050C9000E8B4B /* LPPictureCollectionViewCell.m */,
+				E802BACB1F30523E000E8B4B /* LPPictureBrowser.h */,
+				E802BACC1F30523E000E8B4B /* LPPictureBrowser.m */,
+				E802BACE1F3179ED000E8B4B /* LPPicture.h */,
+				E802BACF1F3179ED000E8B4B /* LPPicture.m */,
 			);
 			path = LPPhotoBrowser;
 			sourceTree = "<group>";
@@ -891,12 +911,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				182B19E61DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m in Sources */,
+				E802BAC11F3050C9000E8B4B /* LPPictureCollectionViewCell.m in Sources */,
 				E8D373E41F15CB270040B541 /* UITextView+Placeholder.m in Sources */,
+				E802BAB81F2F1479000E8B4B /* LPPictureProgress.m in Sources */,
 				E8D373EA1F15CB270040B541 /* LPVersionManager.m in Sources */,
 				E8D373E81F15CB270040B541 /* LPAPPKeyConfig.m in Sources */,
 				1847FEC81DD44A5800A4339B /* NSNumber+JZExtension.m in Sources */,
 				E8D373D71F15CB270040B541 /* NSObject+LPTools.m in Sources */,
 				E8D3743B1F15F9AE0040B541 /* LPLocationManager.m in Sources */,
+				E802BACD1F30523E000E8B4B /* LPPictureBrowser.m in Sources */,
+				E802BAD01F3179ED000E8B4B /* LPPicture.m in Sources */,
 				E8D373E01F15CB270040B541 /* UIDevice+LPTools.m in Sources */,
 				182B19E31DC089E500C8DDE3 /* LPTabBarControllerConfig.m in Sources */,
 				1847FEC01DD44A5800A4339B /* Aspects.m in Sources */,
