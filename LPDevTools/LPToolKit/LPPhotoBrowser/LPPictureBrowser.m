@@ -9,7 +9,7 @@
 #import "LPPictureBrowser.h"
 #import "LPPictureCollectionViewCell.h"
 
-@interface LPPictureBrowser ()<UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIScrollViewDelegate>
+@interface LPPictureBrowser ()<UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIScrollViewDelegate, LPPictureCollectionViewCellDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UILabel *pageTextLabel;
@@ -57,24 +57,38 @@
     UILabel *label = [[UILabel alloc] init];
     label.alpha = 0;
     label.textColor = [UIColor whiteColor];
-    label.center = CGPointMake(self.bounds.size.width * 0.5, self.bounds.size.height - 20);
+    label.center = CGPointMake(self.bounds.size.width * 0.5, self.bounds.size.height - 40);
     label.font = [UIFont systemFontOfSize:16];
     [self addSubview:label];
     self.pageTextLabel = label;
-    
 }
 
 - (void)show {
     //添加到window上
     [[UIApplication sharedApplication].keyWindow addSubview:self];
-    self.pageTextLabel.text = [NSString stringWithFormat:@"%zd/%zd",_currentPhotoIndex, _pictures.count];
+    self.pageTextLabel.text = [NSString stringWithFormat:@"%zd/%zd",_currentPhotoIndex+1, _pictures.count];
+    [self.pageTextLabel sizeToFit];
     self.pageTextLabel.alpha = 1;
     _showAnim = true;
     [_collectionView setContentOffset:CGPointMake([UIScreen mainScreen].bounds.size.width * _currentPhotoIndex, 0)];
     [_collectionView reloadData];
 }
 
-#pragma mark - UICollectionViewDelegate
+#pragma mark - LPPictureCollectionViewCellDelegate
+
+- (void)pictureCell:(LPPictureCollectionViewCell *)pictureCell scale:(CGFloat)scale {
+    self.collectionView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1-scale];
+}
+
+#pragma mark - UIScrollViewDelegate 
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat index = scrollView.contentOffset.x / [UIScreen mainScreen].bounds.size.width;
+    self.pageTextLabel.text = [NSString stringWithFormat:@"%.f/%zd",roundf(index + 1.0), _pictures.count];
+    [self.pageTextLabel sizeToFit];
+}
+
+#pragma mark - UICollectionViewDelega0te
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
@@ -88,6 +102,7 @@
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     LPPictureCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:LPPictureCollectionViewCellKey forIndexPath:indexPath];
+    cell.delegate = self;
     [cell refreshCellWithPictures:_pictures[indexPath.row] showAnim:_showAnim];
     if (_showAnim) {
         _showAnim = false;
@@ -95,5 +110,8 @@
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(nonnull LPPictureCollectionViewCell *)cell forItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    [cell collectionViewDidEndDisplayCell];
+}
 
 @end

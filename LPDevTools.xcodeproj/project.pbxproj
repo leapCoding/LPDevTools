@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C21C6881F2DD3A90089C5B8 /* LPtestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C21C6871F2DD3A90089C5B8 /* LPtestView.m */; };
 		182B19E31DC089E500C8DDE3 /* LPTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19E21DC089E500C8DDE3 /* LPTabBarControllerConfig.m */; };
 		182B19E61DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19E51DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m */; };
 		182B19E91DC0A47F00C8DDE3 /* LPSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182B19E81DC0A47F00C8DDE3 /* LPSecondViewController.m */; };
@@ -107,8 +106,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C21C6861F2DD3A90089C5B8 /* LPtestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPtestView.h; sourceTree = "<group>"; };
-		0C21C6871F2DD3A90089C5B8 /* LPtestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPtestView.m; sourceTree = "<group>"; };
 		1372F38191AE2E389061DE59 /* Pods-LPDevTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LPDevTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LPDevTools/Pods-LPDevTools.debug.xcconfig"; sourceTree = "<group>"; };
 		182B19E11DC089E500C8DDE3 /* LPTabBarControllerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTabBarControllerConfig.h; sourceTree = "<group>"; };
 		182B19E21DC089E500C8DDE3 /* LPTabBarControllerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTabBarControllerConfig.m; sourceTree = "<group>"; };
@@ -316,8 +313,6 @@
 		0C21C6851F2C55410089C5B8 /* LPPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
-				0C21C6861F2DD3A90089C5B8 /* LPtestView.h */,
-				0C21C6871F2DD3A90089C5B8 /* LPtestView.m */,
 				E802BAB61F2F1479000E8B4B /* LPPictureProgress.h */,
 				E802BAB71F2F1479000E8B4B /* LPPictureProgress.m */,
 				E802BABF1F3050C9000E8B4B /* LPPictureCollectionViewCell.h */,
@@ -928,7 +923,6 @@
 				E8D374311F15F5F30040B541 /* LPPushManager.m in Sources */,
 				1851618C1DB772CD00FD1576 /* main.m in Sources */,
 				E8D374491F16045A0040B541 /* UIScrollView+LPRefresh.m in Sources */,
-				0C21C6881F2DD3A90089C5B8 /* LPtestView.m in Sources */,
 				E8D373D91F15CB270040B541 /* NSTimer+LPTools.m in Sources */,
 				183F6D0D1DBA134F009F91F4 /* LPNavigationController.m in Sources */,
 				1847FEC71DD44A5800A4339B /* _JZValue.m in Sources */,

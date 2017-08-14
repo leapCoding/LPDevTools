@@ -10,9 +10,20 @@
 
 static NSString * const LPPictureCollectionViewCellKey = @"LPPictureCollectionViewCell";
 
+@class LPPictureCollectionViewCell;
+@protocol LPPictureCollectionViewCellDelegate <NSObject>
+
+- (void)pictureCell:(LPPictureCollectionViewCell *)pictureCell scale:(CGFloat)scale;
+
+@end
+
 @class LPPicture;
 @interface LPPictureCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, weak) id<LPPictureCollectionViewCellDelegate>delegate;
+
 - (void)refreshCellWithPictures:(LPPicture *)picture showAnim:(BOOL)showAnim;
+
+- (void)collectionViewDidEndDisplayCell;
 
 @end

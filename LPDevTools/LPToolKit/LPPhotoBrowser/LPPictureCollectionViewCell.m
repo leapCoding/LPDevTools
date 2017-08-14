@@ -19,6 +19,12 @@
 
 @property (nonatomic, strong) LPPicture *picture;
 
+@property (nonatomic, assign) CGPoint lastContentOffset;
+
+@property (nonatomic, assign) CGFloat scale;
+
+@property (nonatomic, assign) CGFloat offsetY;
+
 @property (nonatomic, assign) BOOL doubleClicks;
 
 @end
@@ -39,7 +45,7 @@
     
     /// UIScrollView自带缩放功能，方便实现缩放
     UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    scrollView.backgroundColor = [UIColor redColor];
+    scrollView.backgroundColor = [UIColor clearColor];
     scrollView.showsVerticalScrollIndicator = false;
     scrollView.showsHorizontalScrollIndicator = false;
     scrollView.alwaysBounceVertical = true;
@@ -65,16 +71,25 @@
     [self.scrollView addGestureRecognizer:sigleTapGes];
     
     [sigleTapGes requireGestureRecognizerToFail:doubleTapGes];
-    
 }
 
 - (void)refreshCellWithPictures:(LPPicture *)picture showAnim:(BOOL)showAnim {
     _picture = picture;
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:picture.picurl] placeholderImage:picture.placeholderImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        _imageView.frame = [self getImageActualFrame:[self setPictureSize:image.size]];
-        _scrollView.contentSize = _imageView.frame.size;
-    }];
     
+    if (picture.picurl) {
+        //网络图片
+        [_imageView sd_setImageWithURL:[NSURL URLWithString:picture.picurl] placeholderImage:picture.placeholderImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            _imageView.frame = [self getImageActualFrame:[self setPictureSize:image.size]];
+            _scrollView.contentSize = _imageView.frame.size;
+        }];
+    }else {
+        //本地图片
+        _imageView.image = picture.placeholderImage;
+        _imageView.frame = [self getImageActualFrame:[self setPictureSize:picture.placeholderImage.size]];
+        _scrollView.contentSize = _imageView.frame.size;
+    }
+    
+    //第一次显示放大动画效果
     if (picture.imageView && showAnim) {
         CGRect newImageViewFrame = [picture.imageView.superview convertRect:picture.imageView.frame toView:[UIApplication sharedApplication].keyWindow];
         self.imageView.frame = newImageViewFrame;
@@ -82,48 +97,109 @@
             self.imageView.frame = [self getImageActualFrame:[self setPictureSize:picture.imageView.image.size]];
         } completion:nil];
     }
-    
+}
+
+//图片滑出界面时取消放大效果
+- (void)collectionViewDidEndDisplayCell {
+    if (self.scrollView.zoomScale > 1.0) {
+        CGRect zoomRect = [self zoomRectForScale:1.0 withCenter:CGPointMake(0, 0)];
+        [self.scrollView zoomToRect:zoomRect animated:YES];
+    }
 }
 
 #pragma mark - UIScrollViewDelegate
+
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return _imageView;
 }
 
-- (void)scrollViewDidZoom:(UIScrollView *)scrollView
-{
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
     CGPoint center = _imageView.center;
     CGFloat offsetY = (scrollView.bounds.size.height > scrollView.contentSize.height) ? (scrollView.bounds.size.height - scrollView.contentSize.height) * 0.5 : 0.0;
     center.y = scrollView.contentSize.height * 0.5 + offsetY;
     _imageView.center = center;
-    
-    // 如果是缩小，保证在屏幕中间
-//    if (scrollView.zoomScale < scrollView.minimumZoomScale) {
-//        CGFloat offsetX = (scrollView.bounds.size.width > scrollView.contentSize.width) ? (scrollView.bounds.size.width - scrollView.contentSize.width) * 0.5 : 0.0;
-//        center.x = scrollView.contentSize.width * 0.5 + offsetX;
-//        _imageView.center = center;
-//    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
+    self.lastContentOffset = scrollView.contentOffset;
+    // 保存 offsetY
+    _offsetY = scrollView.contentOffset.y;
+
+    // 正在动画
+    if ([self.imageView.layer animationForKey:@"transform"] != nil) {
+        return;
+    }
+    // 用户正在缩放
+    if (_scrollView.zoomBouncing || _scrollView.zooming) {
+        return;
+    }
+
+    CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
+    
+    if (_scrollView.contentSize.height > screenH) {
+        // 代表没有滑动到底部
+        if (_scrollView.contentOffset.y > 0 && _scrollView.contentOffset.y <= _scrollView.contentSize.height - screenH) {
+            return;
+        }
+    }
+    
+    _scale = fabs(_lastContentOffset.y) / screenH;
+    
+    // 如果内容高度 > 屏幕高度
+    // 并且偏移量 > 内容高度 - 屏幕高度
+    // 那么就代表滑动到最底部了
+    if (_scrollView.contentSize.height > screenH && _scrollView.contentOffset.y > _scrollView.contentSize.height - screenH) {
+        _scale = (_scrollView.contentOffset.y - (_scrollView.contentSize.height - screenH)) / screenH;
+    }
+    
+    // 条件1：拖动到顶部再继续往下拖.
+    // 条件2：拖动到顶部再继续往上拖
+    // 两个条件都满足才去设置 scale -> 针对于长图
+    if (_scrollView.contentSize.height > screenH) {
+        if (_scrollView.contentOffset.y < 0 || _scrollView.contentOffset.y > _scrollView.contentSize.height - screenH) {
+            [_delegate pictureCell:self scale:_scale];
+        }
+    }else {
+        [_delegate pictureCell:self scale:_scale];
+    }
+    
+    //如果用户松手
+    if (scrollView.dragging == false) {
+        if (_scale > 0.15 && _scale <= 1) {
+            //关闭图片
+            [self sigleClick:[self.scrollView.gestureRecognizers firstObject]];
+            
+            [scrollView setContentOffset:_lastContentOffset animated:false];
+        }
+    }
+}
+
+- (void)setLastContentOffset:(CGPoint)lastContentOffset {
+    // 如果用户没有在拖动，并且绽放比 > 0.15
+    if (!(_scrollView.dragging == false && _scale > 0.15)) {
+        _lastContentOffset = lastContentOffset;
+    }
 }
 
 #pragma mark - 监听方法
 
 - (void)sigleClick:(UITapGestureRecognizer *)ges {
-    CGRect oldRect = _picture.imageView.frame;
-    CGRect newImageViewFrame = [[UIApplication sharedApplication].keyWindow convertRect:_imageView.frame toView:_picture.imageView.superview];
-    _picture.imageView.frame = newImageViewFrame;
-    [UIView animateWithDuration:0.15 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-        _picture.imageView.frame = oldRect;
-    } completion:^(BOOL finished) {
-        [self removeFromSuperview];
-    }];
-
+    UIView *bottomView = ges.view.superview.superview.superview;
     
-    UIView *view = ges.view;
-    [view.superview.superview.superview.superview removeFromSuperview];
+    CGRect oldRect = _picture.imageView.frame;
+    if (_scrollView.contentOffset.x != 0 || _scrollView.contentOffset.y != 0) {
+        oldRect = CGRectMake(oldRect.origin.x + _scrollView.contentOffset.x, oldRect.origin.y + _scrollView.contentOffset.y, oldRect.size.width, oldRect.size.height);
+    }
+//    CGRect newImageViewFrame = [[UIApplication sharedApplication].keyWindow convertRect:_imageView.frame toView:_picture.imageView.superview];
+//    _picture.imageView.frame = newImageViewFrame;
+    [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+//        _picture.imageView.frame = oldRect;
+        _imageView.frame = oldRect;
+        bottomView.backgroundColor = [UIColor clearColor];
+    } completion:^(BOOL finished) {
+        [bottomView.superview removeFromSuperview];
+    }];
 }
 
 - (void)doubleClick:(UITapGestureRecognizer *)ges {
@@ -135,7 +211,7 @@
     [self.scrollView zoomToRect:zoomRect animated:YES];
 }
 
-- (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center{
+- (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center {
     CGRect zoomRect;
     zoomRect.size.height = self.frame.size.height / scale;
     zoomRect.size.width  = self.frame.size.width  / scale;

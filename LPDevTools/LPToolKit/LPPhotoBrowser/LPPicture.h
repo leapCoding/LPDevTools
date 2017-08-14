@@ -13,7 +13,7 @@
 /**    图片所在的imageView    */
 @property (nonatomic, strong) UIImageView *imageView;
 
-/**    imageView默认图片    */
+/**    imageView默认图片 url为空时默认使用placeholderImage   */
 @property (nonatomic, strong) UIImage *placeholderImage;
 
 /**    图片的URL    */

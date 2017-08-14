@@ -73,7 +73,7 @@
     imageView1.clipsToBounds = true;
     imageView1.tag = 2;
     imageView1.userInteractionEnabled = true;
-    [imageView1 sd_setImageWithURL:[NSURL URLWithString:@"http://cdn.ruguoapp.com/FoIgIUnx09by-vCxZZpIE1IRhr5c.jpg?imageView2/0/h/500/interlace/1/q/30"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    [imageView1 sd_setImageWithURL:[NSURL URLWithString:@"http://139.129.162.63:8085/img2/pub/imgs/ser_item/img/weixiu/peijiangenghuan/ghdengpao.jpg"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
     }];
     [self.view addSubview:imageView1];
     
@@ -91,21 +91,18 @@
     picture.currentPhotoIndex = ges.view.tag -1;
     LPPicture *p = [[LPPicture alloc]init];
     p.imageView = imageview;
-    p.picurl = @"http://cdn.ruguoapp.com/FsZAUtf8serLpkdTJIh0mqUmpTeN.jpg?imageView2/0/h/1000/interlace/0";
+//    p.picurl = @"http://cdn.ruguoapp.com/FsZAUtf8serLpkdTJIh0mqUmpTeN.jpg?imageView2/0/h/1000/interlace/0";
     p.placeholderImage = imageview.image;
     
     UIImageView *imageview1 = [self.view viewWithTag:2];
     LPPicture *p1 = [[LPPicture alloc]init];
-    p1.picurl = @"http://cdn.ruguoapp.com/FoIgIUnx09by-vCxZZpIE1IRhr5c.jpg?imageView2/0/h/1000/interlace/0";
+//    p1.picurl = @"http://139.129.162.63:8085/img2/pub/imgs/ser_item/img/weixiu/peijiangenghuan/ghdengpao.jpg";
     p1.imageView = imageview1;
     p1.placeholderImage = imageview1.image;
     
     picture.pictures = @[p,p1];
+    picture.currentPhotoIndex = ges.view.tag-1;
     [picture show];
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    [self.navigationController pushViewController:[[LPSecondViewController alloc]init] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
