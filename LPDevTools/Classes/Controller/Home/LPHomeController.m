@@ -11,12 +11,18 @@
 #import "LPTestModel.h"
 //#import "UIView+EAFeatureGuideView.h"
 #import "MBProgressHUD.h"
-#import "LPtestView.h"
 #import "LPPictureBrowser.h"
 #import "LPPicture.h"
 #import "UIImageView+WebCache.h"
 
-@interface LPHomeController ()
+#import "LPSlideBar.h"
+#import "iCarousel.h"
+
+@interface LPHomeController ()<iCarouselDataSource,iCarouselDelegate>
+
+@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) LPSlideBar *slidebar;
+@property (strong, nonatomic) iCarousel *myCarousel;
 
 @end
 
@@ -56,7 +62,79 @@
 //    [self.view showTip:@"搜索"];
     
     [self testDemo];
+    
+    
+    //添加myCarousel
+    self.myCarousel = ({
+        iCarousel *icarousel = [[iCarousel alloc] initWithFrame:CGRectMake(0, 350, self.view.frame.size.width, 100)];
+        icarousel.dataSource = self;
+        icarousel.delegate = self;
+        icarousel.decelerationRate = 1.0;
+        icarousel.scrollSpeed = 1.0;
+        icarousel.type = iCarouselTypeLinear;
+        icarousel.pagingEnabled = YES;
+        icarousel.clipsToBounds = YES;
+        icarousel.bounceDistance = 0.2;
+        [self.view addSubview:icarousel];
+        
+        icarousel;
+    });
+
+    
+    _slidebar = [[LPSlideBar alloc]initWithFrame:CGRectMake(0, 300, self.view.frame.size.width, 40)];
+//    slidebar.backgroundColor = [UIColor redColor];
+    _slidebar.itemsTitle = @[@"圣诞快乐",@"圣诞乐",@"圣快乐",@"诞快乐",@"圣诞快",@"圣诞快乐",@"圣诞乐",@"圣快乐",@"诞快乐",@"圣诞快"];
+    _slidebar.showRightButton = YES;
+    [self.view addSubview:_slidebar];
+    __weak typeof(self) weakSelf = self;
+    [_slidebar slideBarItemSelectedCallback:^(NSUInteger idx) {
+        NSLog(@"%ld",idx);
+        [weakSelf.myCarousel scrollToItemAtIndex:idx animated:NO];
+    }];
 }
+
+#pragma mark iCarousel M
+
+- (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
+    return 10;
+}
+
+- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view{
+    
+    UIView *listView = view;
+    UILabel *label;
+    if (listView) {
+        
+    }else{
+        listView = [[UIView alloc] initWithFrame:carousel.bounds];
+        label = [[UILabel alloc]initWithFrame:listView.bounds];
+        [listView addSubview:label];
+    }
+    
+    label.text = [NSString stringWithFormat:@"%ld",index];
+    NSLog(@"---%ld",index);
+    
+//    [listView setSubScrollsToTop:(index == carousel.currentItemIndex)];
+    return listView;
+}
+
+- (void)carouselDidScroll:(iCarousel *)carousel{
+    if (_slidebar) {
+        float offset = carousel.scrollOffset;
+        if (offset > 0) {
+            [_slidebar moveIndexWithProgress:offset];
+        }
+    }
+}
+
+- (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel{
+    
+    if (_slidebar) {
+//        _slidebar.currentIndex = carousel.currentItemIndex;
+    }
+    
+}
+
 
 - (void)testDemo {
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 100, 150, 150)];

@@ -37,6 +37,9 @@
 		E802BAC11F3050C9000E8B4B /* LPPictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E802BAC01F3050C9000E8B4B /* LPPictureCollectionViewCell.m */; };
 		E802BACD1F30523E000E8B4B /* LPPictureBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E802BACC1F30523E000E8B4B /* LPPictureBrowser.m */; };
 		E802BAD01F3179ED000E8B4B /* LPPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = E802BACF1F3179ED000E8B4B /* LPPicture.m */; };
+		E8C206D41F5E354400AF50EF /* LPSlideBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C206D31F5E354400AF50EF /* LPSlideBarItem.m */; };
+		E8C206D71F5E3DEF00AF50EF /* LPSlideBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C206D61F5E3DEF00AF50EF /* LPSlideBar.m */; };
+		E8C206DB1F5FEA7F00AF50EF /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C206DA1F5FEA7F00AF50EF /* iCarousel.m */; };
 		E8D373D51F15CB270040B541 /* NSArray+LPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D373A81F15CB270040B541 /* NSArray+LPTools.m */; };
 		E8D373D61F15CB270040B541 /* NSDate+LPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D373AA1F15CB270040B541 /* NSDate+LPTools.m */; };
 		E8D373D71F15CB270040B541 /* NSObject+LPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D373AC1F15CB270040B541 /* NSObject+LPTools.m */; };
@@ -172,6 +175,12 @@
 		E802BACC1F30523E000E8B4B /* LPPictureBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPictureBrowser.m; sourceTree = "<group>"; };
 		E802BACE1F3179ED000E8B4B /* LPPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPicture.h; sourceTree = "<group>"; };
 		E802BACF1F3179ED000E8B4B /* LPPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPicture.m; sourceTree = "<group>"; };
+		E8C206D21F5E354400AF50EF /* LPSlideBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPSlideBarItem.h; sourceTree = "<group>"; };
+		E8C206D31F5E354400AF50EF /* LPSlideBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPSlideBarItem.m; sourceTree = "<group>"; };
+		E8C206D51F5E3DEF00AF50EF /* LPSlideBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPSlideBar.h; sourceTree = "<group>"; };
+		E8C206D61F5E3DEF00AF50EF /* LPSlideBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPSlideBar.m; sourceTree = "<group>"; };
+		E8C206D91F5FEA7F00AF50EF /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		E8C206DA1F5FEA7F00AF50EF /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		E8D373A61F15CB270040B541 /* LPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPCategory.h; sourceTree = "<group>"; };
 		E8D373A71F15CB270040B541 /* NSArray+LPTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LPTools.h"; sourceTree = "<group>"; };
 		E8D373A81F15CB270040B541 /* NSArray+LPTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LPTools.m"; sourceTree = "<group>"; };
@@ -328,6 +337,8 @@
 		1847FE9D1DD44A5800A4339B /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				E8C206D81F5FEA7F00AF50EF /* iCarousel */,
+				E8C206D11F5E34FE00AF50EF /* LPSlideBar */,
 				E8D374271F15F4410040B541 /* WechatPay */,
 				E8D374071F15F0A40040B541 /* UMSocial */,
 				E8D373EB1F15CE2F0040B541 /* Alipay */,
@@ -539,6 +550,26 @@
 				59D595416016D0870177CCC8 /* libPods-LPDevTools.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8C206D11F5E34FE00AF50EF /* LPSlideBar */ = {
+			isa = PBXGroup;
+			children = (
+				E8C206D21F5E354400AF50EF /* LPSlideBarItem.h */,
+				E8C206D31F5E354400AF50EF /* LPSlideBarItem.m */,
+				E8C206D51F5E3DEF00AF50EF /* LPSlideBar.h */,
+				E8C206D61F5E3DEF00AF50EF /* LPSlideBar.m */,
+			);
+			path = LPSlideBar;
+			sourceTree = "<group>";
+		};
+		E8C206D81F5FEA7F00AF50EF /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				E8C206D91F5FEA7F00AF50EF /* iCarousel.h */,
+				E8C206DA1F5FEA7F00AF50EF /* iCarousel.m */,
+			);
+			path = iCarousel;
 			sourceTree = "<group>";
 		};
 		E8D373A41F15CB270040B541 /* LPToolKit */ = {
@@ -906,6 +937,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				182B19E61DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m in Sources */,
+				E8C206D71F5E3DEF00AF50EF /* LPSlideBar.m in Sources */,
 				E802BAC11F3050C9000E8B4B /* LPPictureCollectionViewCell.m in Sources */,
 				E8D373E41F15CB270040B541 /* UITextView+Placeholder.m in Sources */,
 				E802BAB81F2F1479000E8B4B /* LPPictureProgress.m in Sources */,
@@ -933,6 +965,7 @@
 				E8D373E91F15CB270040B541 /* LPJumpManager.m in Sources */,
 				E8D374061F15EFEC0040B541 /* LPShareManager.m in Sources */,
 				E8D373E31F15CB270040B541 /* UITextField+LPTools.m in Sources */,
+				E8C206D41F5E354400AF50EF /* LPSlideBarItem.m in Sources */,
 				E8D373E61F15CB270040B541 /* UIViewController+LPTools.m in Sources */,
 				1847FEC41DD44A5800A4339B /* CYLTabBarController.m in Sources */,
 				1847FF1F1DD46CD100A4339B /* LPTestModel.m in Sources */,
@@ -942,6 +975,7 @@
 				E8D373DB1F15CB270040B541 /* UIApplication+LPTools.m in Sources */,
 				18797D5D1DB855DB00AB093E /* LPTabBarController.m in Sources */,
 				1847FECB1DD44A5800A4339B /* UINavigationController+JZExtension.m in Sources */,
+				E8C206DB1F5FEA7F00AF50EF /* iCarousel.m in Sources */,
 				1847FEC61DD44A5800A4339B /* _JZNavigationInteractiveTransition.m in Sources */,
 				1847FECC1DD44A5800A4339B /* UIViewController+JZExtension.m in Sources */,
 				18797D601DB8562500AB093E /* LPHomeController.m in Sources */,
