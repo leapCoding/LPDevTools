@@ -25,6 +25,25 @@
 
 @implementation UITextView (Placeholder)
 
+- (void)textViewWordLimitMaxLength:(NSInteger)length {
+    NSString *toBeString = self.text;
+    NSString *lang = [[UIApplication sharedApplication] textInputMode].primaryLanguage;
+    if ([lang isEqualToString:@"zh-Hans"]) {// 中文输入
+        UITextRange *selectedRange = [self markedTextRange];
+        //获取高亮部分
+        UITextPosition *position = [self positionFromPosition:selectedRange.start offset:0];
+        if (!position) {// 没有高亮选择的字，则对已输入的文字进行字数统计和限制
+            if (toBeString.length > length) {
+                self.text = [toBeString substringToIndex:length];
+            }
+        }
+    }else {
+        if (toBeString.length > length) {
+            self.text = [toBeString substringToIndex:length];
+        }
+    }
+}
+
 #pragma mark - Swizzle Dealloc
 
 + (void)load {

@@ -22,7 +22,7 @@
     self.view.backgroundColor = [UIColor blueColor];
     // Do any additional setup after loading the view.
 //    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    NSLog(@"%@",self.navigationController.viewControllers);
+//    NSLog(@"%@",self.navigationController.viewControllers);
     _webView = [[UIWebView alloc]initWithFrame:self.view.bounds];
     _webView.delegate = self;
     _webView.scalesPageToFit = YES;

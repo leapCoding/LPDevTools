@@ -12,4 +12,10 @@
 
 - (void)configurePlaceholderColor:(UIColor *)color font:(UIFont *)font;
 
+//字数输入限制
+- (void)textFieldWordLimitMaxLength:(NSInteger)length;
+
+//保留两位小数
+- (void)textFieldLimitFloat;
+
 @end

@@ -35,4 +35,6 @@ FOUNDATION_EXPORT const unsigned char UITextView_PlaceholderVersionString[];
 
 + (UIColor *)defaultPlaceholderColor;
 
+- (void)textViewWordLimitMaxLength:(NSInteger)length;
+
 @end

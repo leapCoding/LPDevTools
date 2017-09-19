@@ -40,6 +40,8 @@
 		E8C206D41F5E354400AF50EF /* LPSlideBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C206D31F5E354400AF50EF /* LPSlideBarItem.m */; };
 		E8C206D71F5E3DEF00AF50EF /* LPSlideBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C206D61F5E3DEF00AF50EF /* LPSlideBar.m */; };
 		E8C206DB1F5FEA7F00AF50EF /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C206DA1F5FEA7F00AF50EF /* iCarousel.m */; };
+		E8C206E01F62306000AF50EF /* LPTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C206DF1F62306000AF50EF /* LPTabBar.m */; };
+		E8C206E31F626AAA00AF50EF /* LPTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C206E21F626AAA00AF50EF /* LPTabViewController.m */; };
 		E8D373D51F15CB270040B541 /* NSArray+LPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D373A81F15CB270040B541 /* NSArray+LPTools.m */; };
 		E8D373D61F15CB270040B541 /* NSDate+LPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D373AA1F15CB270040B541 /* NSDate+LPTools.m */; };
 		E8D373D71F15CB270040B541 /* NSObject+LPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D373AC1F15CB270040B541 /* NSObject+LPTools.m */; };
@@ -181,6 +183,10 @@
 		E8C206D61F5E3DEF00AF50EF /* LPSlideBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPSlideBar.m; sourceTree = "<group>"; };
 		E8C206D91F5FEA7F00AF50EF /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		E8C206DA1F5FEA7F00AF50EF /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		E8C206DE1F62306000AF50EF /* LPTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTabBar.h; sourceTree = "<group>"; };
+		E8C206DF1F62306000AF50EF /* LPTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTabBar.m; sourceTree = "<group>"; };
+		E8C206E11F626AAA00AF50EF /* LPTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTabViewController.h; sourceTree = "<group>"; };
+		E8C206E21F626AAA00AF50EF /* LPTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTabViewController.m; sourceTree = "<group>"; };
 		E8D373A61F15CB270040B541 /* LPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPCategory.h; sourceTree = "<group>"; };
 		E8D373A71F15CB270040B541 /* NSArray+LPTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LPTools.h"; sourceTree = "<group>"; };
 		E8D373A81F15CB270040B541 /* NSArray+LPTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LPTools.m"; sourceTree = "<group>"; };
@@ -337,6 +343,8 @@
 		1847FE9D1DD44A5800A4339B /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				E8C206DD1F62303A00AF50EF /* LPTabBar */,
+				E8C206DC1F61278F00AF50EF /* LPNavigationBar */,
 				E8C206D81F5FEA7F00AF50EF /* iCarousel */,
 				E8C206D11F5E34FE00AF50EF /* LPSlideBar */,
 				E8D374271F15F4410040B541 /* WechatPay */,
@@ -570,6 +578,24 @@
 				E8C206DA1F5FEA7F00AF50EF /* iCarousel.m */,
 			);
 			path = iCarousel;
+			sourceTree = "<group>";
+		};
+		E8C206DC1F61278F00AF50EF /* LPNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LPNavigationBar;
+			sourceTree = "<group>";
+		};
+		E8C206DD1F62303A00AF50EF /* LPTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E8C206DE1F62306000AF50EF /* LPTabBar.h */,
+				E8C206DF1F62306000AF50EF /* LPTabBar.m */,
+				E8C206E11F626AAA00AF50EF /* LPTabViewController.h */,
+				E8C206E21F626AAA00AF50EF /* LPTabViewController.m */,
+			);
+			path = LPTabBar;
 			sourceTree = "<group>";
 		};
 		E8D373A41F15CB270040B541 /* LPToolKit */ = {
@@ -956,6 +982,7 @@
 				1851618C1DB772CD00FD1576 /* main.m in Sources */,
 				E8D374491F16045A0040B541 /* UIScrollView+LPRefresh.m in Sources */,
 				E8D373D91F15CB270040B541 /* NSTimer+LPTools.m in Sources */,
+				E8C206E01F62306000AF50EF /* LPTabBar.m in Sources */,
 				183F6D0D1DBA134F009F91F4 /* LPNavigationController.m in Sources */,
 				1847FEC71DD44A5800A4339B /* _JZValue.m in Sources */,
 				E8D373E51F15CB270040B541 /* UIView+LPTools.m in Sources */,
@@ -969,6 +996,7 @@
 				E8D373E61F15CB270040B541 /* UIViewController+LPTools.m in Sources */,
 				1847FEC41DD44A5800A4339B /* CYLTabBarController.m in Sources */,
 				1847FF1F1DD46CD100A4339B /* LPTestModel.m in Sources */,
+				E8C206E31F626AAA00AF50EF /* LPTabViewController.m in Sources */,
 				E8FE833E1F2867A700E18C73 /* LPLaunchImageAdView.m in Sources */,
 				E8D374261F15F38E0040B541 /* LPPayManager.m in Sources */,
 				E8D373D81F15CB270040B541 /* NSString+LPTools.m in Sources */,
