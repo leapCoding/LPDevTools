@@ -10,10 +10,17 @@
 
 @interface NSArray (LPTools)
 
+
 - (BOOL)isNotEmpty;
 
+/**
+ 数组是否存在字符串string
+ */
 - (BOOL)isContainsString:(NSString *)string;
 
+/**
+ 反转数组
+ */
 - (NSArray *)reverseArray;
 
 @end

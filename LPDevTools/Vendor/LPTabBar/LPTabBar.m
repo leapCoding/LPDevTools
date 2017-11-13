@@ -24,6 +24,24 @@
     return self;
 }
 
+//添加阴影
+- (void)addShadowLayer {
+    self.layer.shadowColor = [UIColor blackColor].CGColor;//shadowColor阴影颜色
+    self.layer.shadowOpacity = 0.4;//阴影透明度，默认0
+    self.layer.shadowOffset = CGSizeMake(0,0);
+    self.layer.shadowRadius = 4;//阴影半径，默认3
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    
+    [path moveToPoint:CGPointMake(0, -2)];
+    [path addLineToPoint:CGPointMake(CGRectGetWidth([UIScreen mainScreen].bounds), -2)];
+    [path addLineToPoint:CGPointMake(CGRectGetWidth([UIScreen mainScreen].bounds), 1)];
+    [path addLineToPoint:CGPointMake(0, 1)];
+    [path addLineToPoint:CGPointMake(0, -2)];
+    
+    self.layer.shadowPath = path.CGPath;
+}
+
 - (void)layoutSubviews {
     [super layoutSubviews];
     

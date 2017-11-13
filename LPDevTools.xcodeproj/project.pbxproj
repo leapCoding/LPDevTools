@@ -96,6 +96,7 @@
 		E8D374491F16045A0040B541 /* UIScrollView+LPRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D374481F16045A0040B541 /* UIScrollView+LPRefresh.m */; };
 		E8D3744F1F16060F0040B541 /* LPApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D3744C1F16060F0040B541 /* LPApiManager.m */; };
 		E8D374501F16060F0040B541 /* LPNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D3744E1F16060F0040B541 /* LPNetWorkManager.m */; };
+		E8DFA96A1F959BF2007FCFAA /* NSFileManager+LPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DFA9691F959BF2007FCFAA /* NSFileManager+LPTools.m */; };
 		E8FE823F1F258A1900E18C73 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = E8FE823E1F258A1900E18C73 /* index.html */; };
 		E8FE833E1F2867A700E18C73 /* LPLaunchImageAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FE833D1F2867A700E18C73 /* LPLaunchImageAdView.m */; };
 /* End PBXBuildFile section */
@@ -283,6 +284,8 @@
 		E8D3744C1F16060F0040B541 /* LPApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPApiManager.m; sourceTree = "<group>"; };
 		E8D3744D1F16060F0040B541 /* LPNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNetWorkManager.h; sourceTree = "<group>"; };
 		E8D3744E1F16060F0040B541 /* LPNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNetWorkManager.m; sourceTree = "<group>"; };
+		E8DFA9681F959BF2007FCFAA /* NSFileManager+LPTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+LPTools.h"; sourceTree = "<group>"; };
+		E8DFA9691F959BF2007FCFAA /* NSFileManager+LPTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+LPTools.m"; sourceTree = "<group>"; };
 		E8FE823E1F258A1900E18C73 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		E8FE833C1F2867A700E18C73 /* LPLaunchImageAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPLaunchImageAdView.h; sourceTree = "<group>"; };
 		E8FE833D1F2867A700E18C73 /* LPLaunchImageAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPLaunchImageAdView.m; sourceTree = "<group>"; };
@@ -622,6 +625,8 @@
 				E8D373AA1F15CB270040B541 /* NSDate+LPTools.m */,
 				E8D373AB1F15CB270040B541 /* NSObject+LPTools.h */,
 				E8D373AC1F15CB270040B541 /* NSObject+LPTools.m */,
+				E8DFA9681F959BF2007FCFAA /* NSFileManager+LPTools.h */,
+				E8DFA9691F959BF2007FCFAA /* NSFileManager+LPTools.m */,
 				E8D373AD1F15CB270040B541 /* NSString+LPTools.h */,
 				E8D373AE1F15CB270040B541 /* NSString+LPTools.m */,
 				E8D373AF1F15CB270040B541 /* NSTimer+LPTools.h */,
@@ -1009,6 +1014,7 @@
 				18797D601DB8562500AB093E /* LPHomeController.m in Sources */,
 				E8D373DC1F15CB270040B541 /* UIBarButtonItem+Badge.m in Sources */,
 				E8D373DF1F15CB270040B541 /* UIColor+LPTools.m in Sources */,
+				E8DFA96A1F959BF2007FCFAA /* NSFileManager+LPTools.m in Sources */,
 				1847FEC91DD44A5800A4339B /* UINavigationBar+JZExtension.m in Sources */,
 				E8D373D51F15CB270040B541 /* NSArray+LPTools.m in Sources */,
 				E8D373E21F15CB270040B541 /* UILabel+LPTools.m in Sources */,

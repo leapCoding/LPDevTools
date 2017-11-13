@@ -76,7 +76,7 @@
 + (NSDate *)dateAfterDate:(NSDate *)date day:(NSInteger)day;
 
 /**
- * 返回day天后的日期(若day为负数,则为|day|天前的日期)
+ * 返回month月后的日期(若month为负数,则为|month|月前的日期)
  */
 - (NSDate *)dateAfterMonth:(NSUInteger)month;
 + (NSDate *)dateAfterDate:(NSDate *)date month:(NSInteger)month;

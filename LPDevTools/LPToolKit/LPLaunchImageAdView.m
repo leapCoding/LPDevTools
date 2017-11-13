@@ -177,7 +177,7 @@ static NSString *const adImageName = @"adImageName";
     [[UIApplication sharedApplication].delegate.window makeKeyAndVisible];
     NSString *launchImageName = [self getLaunchImage:@"Portrait"];
     UIImage * launchImage = [UIImage imageNamed:launchImageName];
-    self.backgroundColor = [UIColor colorWithPatternImage:launchImage];
+//    self.backgroundColor = [UIColor colorWithPatternImage:launchImage];
     self.frame = CGRectMake(0, 0, mainWidth, mainHeight);
     if (adType == AdTypeFullScreen) {
         self.adImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, mainWidth, mainHeight)];

@@ -12,6 +12,7 @@
 #import "NSString+LPTools.h"
 #import "UIView+LPTools.h"
 #import "UIColor+LPTools.h"
+#import "NSFileManager+LPTools.h"
 #import "NSObject+LPTools.h"
 #import "UITextField+LPTools.h"
 #import "UIButton+LPTools.h"

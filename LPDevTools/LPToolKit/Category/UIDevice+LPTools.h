@@ -20,6 +20,8 @@
  */
 + (double)systemVersion;
 
++ (NSString *)iphoneType;
+
 /**
  * 程序外调用电话 直接拨打不给提示
  */

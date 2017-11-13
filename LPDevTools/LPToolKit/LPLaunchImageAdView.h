@@ -24,15 +24,15 @@ typedef void (^LPClick) (ClickType);
 @interface LPLaunchImageAdView : UIView
 
 @property (nonatomic, strong) UIImageView *adImgView;
-///倒计时总时长,默认6秒
+// 倒计时总时长,默认6秒
 @property (nonatomic, assign) NSInteger adTime;
-///跳过按钮 可自定义
+// 跳过按钮 可自定义
 @property (nonatomic, strong) UIButton *skipBtn;
-///本地图片
+// 本地图片
 @property (nonatomic, strong) UIImage *localAdImg;
-///本地图片名字
+// 本地图片名字
 @property (nonatomic, copy) NSString *localAdImgName;
-///网络图片URL
+// 网络图片URL
 @property (nonatomic, copy) NSString *imgUrl;
 
 @property (nonatomic, copy) LPClick clickBlock;
@@ -43,7 +43,5 @@ typedef void (^LPClick) (ClickType);
 - (void(^)(AdType const adType))getLBlaunchImageAdViewType;
 
 + (void)makeLBLaunchImageAdView:(void(^)(LPLaunchImageAdView *))block;
-
-//+ (void)
 
 @end

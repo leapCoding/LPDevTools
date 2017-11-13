@@ -32,11 +32,11 @@
     [self.window makeKeyAndVisible];
    
     
-//    [LPLaunchImageAdView makeLBLaunchImageAdView:^(LPLaunchImageAdView *imageAdView) {
-//        imageAdView.clickBlock = ^(ClickType type) {
-//            
-//        };
-//    }];
+    [LPLaunchImageAdView makeLBLaunchImageAdView:^(LPLaunchImageAdView *imageAdView) {
+        imageAdView.clickBlock = ^(ClickType type) {
+            
+        };
+    }];
 
     
     return YES;
