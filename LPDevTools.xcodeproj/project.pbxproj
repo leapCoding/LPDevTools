@@ -37,6 +37,7 @@
 		E802BAC11F3050C9000E8B4B /* LPPictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E802BAC01F3050C9000E8B4B /* LPPictureCollectionViewCell.m */; };
 		E802BACD1F30523E000E8B4B /* LPPictureBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E802BACC1F30523E000E8B4B /* LPPictureBrowser.m */; };
 		E802BAD01F3179ED000E8B4B /* LPPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = E802BACF1F3179ED000E8B4B /* LPPicture.m */; };
+		E86EF67220941590007CAA98 /* LPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86EF67120941590007CAA98 /* LPBaseViewController.m */; };
 		E88BB20D1FC6AEF2004503BA /* LPPermissionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E88BB20C1FC6AEF2004503BA /* LPPermissionManager.m */; };
 		E8C206D41F5E354400AF50EF /* LPSlideBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C206D31F5E354400AF50EF /* LPSlideBarItem.m */; };
 		E8C206D71F5E3DEF00AF50EF /* LPSlideBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C206D61F5E3DEF00AF50EF /* LPSlideBar.m */; };
@@ -179,6 +180,8 @@
 		E802BACC1F30523E000E8B4B /* LPPictureBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPictureBrowser.m; sourceTree = "<group>"; };
 		E802BACE1F3179ED000E8B4B /* LPPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPicture.h; sourceTree = "<group>"; };
 		E802BACF1F3179ED000E8B4B /* LPPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPicture.m; sourceTree = "<group>"; };
+		E86EF67020941590007CAA98 /* LPBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPBaseViewController.h; sourceTree = "<group>"; };
+		E86EF67120941590007CAA98 /* LPBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPBaseViewController.m; sourceTree = "<group>"; };
 		E88BB20B1FC6AEF2004503BA /* LPPermissionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPPermissionManager.h; sourceTree = "<group>"; };
 		E88BB20C1FC6AEF2004503BA /* LPPermissionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPPermissionManager.m; sourceTree = "<group>"; };
 		E8C206D21F5E354400AF50EF /* LPSlideBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPSlideBarItem.h; sourceTree = "<group>"; };
@@ -500,6 +503,8 @@
 				182B19E21DC089E500C8DDE3 /* LPTabBarControllerConfig.m */,
 				182B19E41DC0944D00C8DDE3 /* CYLPlusButtonSubclass.h */,
 				182B19E51DC0944D00C8DDE3 /* CYLPlusButtonSubclass.m */,
+				E86EF67020941590007CAA98 /* LPBaseViewController.h */,
+				E86EF67120941590007CAA98 /* LPBaseViewController.m */,
 			);
 			path = BaseController;
 			sourceTree = "<group>";
@@ -994,6 +999,7 @@
 				E8D373D91F15CB270040B541 /* NSTimer+LPTools.m in Sources */,
 				E8C206E01F62306000AF50EF /* LPTabBar.m in Sources */,
 				183F6D0D1DBA134F009F91F4 /* LPNavigationController.m in Sources */,
+				E86EF67220941590007CAA98 /* LPBaseViewController.m in Sources */,
 				1847FEC71DD44A5800A4339B /* _JZValue.m in Sources */,
 				E8D373E51F15CB270040B541 /* UIView+LPTools.m in Sources */,
 				E8D374501F16060F0040B541 /* LPNetWorkManager.m in Sources */,
@@ -1175,6 +1181,7 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/LPDevTools/LPDevToolsPrefix.pch";
 				INFOPLIST_FILE = LPDevTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1232,6 +1239,7 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/LPDevTools/LPDevToolsPrefix.pch";
 				INFOPLIST_FILE = LPDevTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
