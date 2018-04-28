@@ -37,6 +37,7 @@
 		E802BAC11F3050C9000E8B4B /* LPPictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E802BAC01F3050C9000E8B4B /* LPPictureCollectionViewCell.m */; };
 		E802BACD1F30523E000E8B4B /* LPPictureBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E802BACC1F30523E000E8B4B /* LPPictureBrowser.m */; };
 		E802BAD01F3179ED000E8B4B /* LPPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = E802BACF1F3179ED000E8B4B /* LPPicture.m */; };
+		E88BB20D1FC6AEF2004503BA /* LPPermissionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E88BB20C1FC6AEF2004503BA /* LPPermissionManager.m */; };
 		E8C206D41F5E354400AF50EF /* LPSlideBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C206D31F5E354400AF50EF /* LPSlideBarItem.m */; };
 		E8C206D71F5E3DEF00AF50EF /* LPSlideBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C206D61F5E3DEF00AF50EF /* LPSlideBar.m */; };
 		E8C206DB1F5FEA7F00AF50EF /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C206DA1F5FEA7F00AF50EF /* iCarousel.m */; };
@@ -178,6 +179,8 @@
 		E802BACC1F30523E000E8B4B /* LPPictureBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPictureBrowser.m; sourceTree = "<group>"; };
 		E802BACE1F3179ED000E8B4B /* LPPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPicture.h; sourceTree = "<group>"; };
 		E802BACF1F3179ED000E8B4B /* LPPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPicture.m; sourceTree = "<group>"; };
+		E88BB20B1FC6AEF2004503BA /* LPPermissionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPPermissionManager.h; sourceTree = "<group>"; };
+		E88BB20C1FC6AEF2004503BA /* LPPermissionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPPermissionManager.m; sourceTree = "<group>"; };
 		E8C206D21F5E354400AF50EF /* LPSlideBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPSlideBarItem.h; sourceTree = "<group>"; };
 		E8C206D31F5E354400AF50EF /* LPSlideBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPSlideBarItem.m; sourceTree = "<group>"; };
 		E8C206D51F5E3DEF00AF50EF /* LPSlideBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPSlideBar.h; sourceTree = "<group>"; };
@@ -688,6 +691,8 @@
 				E8D374371F15F8FF0040B541 /* LPDataStoreManager.m */,
 				E8D374391F15F9AE0040B541 /* LPLocationManager.h */,
 				E8D3743A1F15F9AE0040B541 /* LPLocationManager.m */,
+				E88BB20B1FC6AEF2004503BA /* LPPermissionManager.h */,
+				E88BB20C1FC6AEF2004503BA /* LPPermissionManager.m */,
 				E8D374321F15F7AA0040B541 /* LPManager.h */,
 			);
 			path = Manager;
@@ -999,6 +1004,7 @@
 				E8D373E31F15CB270040B541 /* UITextField+LPTools.m in Sources */,
 				E8C206D41F5E354400AF50EF /* LPSlideBarItem.m in Sources */,
 				E8D373E61F15CB270040B541 /* UIViewController+LPTools.m in Sources */,
+				E88BB20D1FC6AEF2004503BA /* LPPermissionManager.m in Sources */,
 				1847FEC41DD44A5800A4339B /* CYLTabBarController.m in Sources */,
 				1847FF1F1DD46CD100A4339B /* LPTestModel.m in Sources */,
 				E8C206E31F626AAA00AF50EF /* LPTabViewController.m in Sources */,

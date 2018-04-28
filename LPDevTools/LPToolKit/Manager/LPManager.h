@@ -18,5 +18,6 @@
 #import "LPPushManager.h"
 #import "LPResourcesManager.h"
 #import "LPDataStoreManager.h"
+#import "LPPermissionManager.h"
 
 #endif /* LPManager_h */

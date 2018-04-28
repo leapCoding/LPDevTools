@@ -33,29 +33,6 @@
     return img;
 }
 
-//裁剪图片
-+ (UIImage *)cutImage:(UIImage*)image size:(CGSize)asize
-{
-    CGSize newSize;
-    CGImageRef imageRef = nil;
-    
-    if ((image.size.width / image.size.height) < (asize.width / asize.height)) {
-        newSize.width = image.size.width;
-        newSize.height = image.size.width * asize.height / asize.width;
-        
-        imageRef = CGImageCreateWithImageInRect([image CGImage], CGRectMake(0, fabs(image.size.height - newSize.height) / 2, newSize.width, newSize.height));
-        
-    } else {
-        newSize.height = image.size.height;
-        newSize.width = image.size.height * asize.width / asize.height;
-        
-        imageRef = CGImageCreateWithImageInRect([image CGImage], CGRectMake(fabs(image.size.width - newSize.width) / 2, 0, newSize.width, newSize.height));
-
-    }
-    
-    return [UIImage imageWithCGImage:imageRef];
-}
-
 + (UIImage *)drawImageWithImageNamed:(NSString *)name {
     //1.获取图片
     UIImage *image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:name ofType:nil]];
@@ -178,6 +155,27 @@
     return newImage;
 }
 
+//裁剪图片
++ (UIImage *)cutImage:(UIImage*)image size:(CGSize)asize {
+    CGSize newSize;
+    CGImageRef imageRef = nil;
+    
+    if ((image.size.width / image.size.height) < (asize.width / asize.height)) {
+        newSize.width = image.size.width;
+        newSize.height = image.size.width * asize.height / asize.width;
+        
+        imageRef = CGImageCreateWithImageInRect([image CGImage], CGRectMake(0, fabs(image.size.height - newSize.height) / 2, newSize.width, newSize.height));
+        
+    } else {
+        newSize.height = image.size.height;
+        newSize.width = image.size.height * asize.width / asize.height;
+        
+        imageRef = CGImageCreateWithImageInRect([image CGImage], CGRectMake(fabs(image.size.width - newSize.width) / 2, 0, newSize.width, newSize.height));
+        
+    }
+    
+    return [UIImage imageWithCGImage:imageRef];
+}
 
 -(UIImage *)scaledToSize:(CGSize)size {
     
@@ -186,9 +184,8 @@
     
     CGFloat oldWidth = self.size.width;
     CGFloat oldHeight = self.size.height;
-    
+
     CGFloat scaleFactor = (oldWidth > oldHeight) ? width / oldWidth : height / oldHeight;
-    
     // 如果不需要缩放
     if (scaleFactor > 1.0) {
         return self;
