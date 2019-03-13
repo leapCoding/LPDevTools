@@ -34,8 +34,7 @@ static NSMutableArray *requestTasks;
  *
  *  @return 管理请求的单例对象
  */
-+ (instancetype)sharedManager
-{
++ (instancetype)sharedManager {
     static LPNetWorkManager *manager;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -44,10 +43,8 @@ static NSMutableArray *requestTasks;
     return manager;
 }
 
-- (instancetype)init
-{
-    if (self = [super init])
-    {
+- (instancetype)init {
+    if (self = [super init]) {
         [self initSessionManager];
     }
     return self;
@@ -95,6 +92,31 @@ static NSMutableArray *requestTasks;
     }];
 }
 
+#pragma mark 网络监听
+- (void)startMonitoring {
+    // 1.获得网络监控的管理者
+    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
+    // 2.设置网络状态改变后的处理
+    [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        // 当网络状态改变了, 就会调用这个block
+        switch (status){
+            case AFNetworkReachabilityStatusUnknown: // 未知网络
+                [LPNetWorkManager sharedManager].networkStats=StatusUnknown;
+                break;
+            case AFNetworkReachabilityStatusNotReachable: // 没有网络(断网)
+                [LPNetWorkManager sharedManager].networkStats=StatusNotReachable;
+                break;
+            case AFNetworkReachabilityStatusReachableViaWWAN: // 手机自带网络
+                [LPNetWorkManager sharedManager].networkStats=StatusReachableViaWWAN;
+                break;
+            case AFNetworkReachabilityStatusReachableViaWiFi: // WIFI
+                [LPNetWorkManager sharedManager].networkStats=StatusReachableViaWiFi;
+                break;
+        }
+    }];
+    [mgr startMonitoring];
+}
+
 - (NSURLSessionDataTask *)callApiWithUrl:(NSString *)url params:(NSDictionary *)params requestType:(LPApiRequestType)requestType callBack:(LPCallback)callback {
     // url长度为0时，返回错误
     if (!url || url.length == 0)
@@ -104,12 +126,14 @@ static NSMutableArray *requestTasks;
         }
         return nil;
     }
+    
     // 会话管理对象为空时
     if (!_sessionManager)
     {
         [self initSessionManager];
     }
     
+    __block NSURLSessionDataTask * urlSessionDataTask;
     // 请求成功时的回调
     void (^successWrap)(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) = ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject){
         if (!responseObject || (![responseObject isKindOfClass:[NSDictionary class]] && ![responseObject isKindOfClass:[NSArray class]])) // 若解析数据格式异常，返回错误
@@ -134,39 +158,46 @@ static NSMutableArray *requestTasks;
         }
     };
 
-    
     // 检查url
     if (![NSURL URLWithString:url]) {
         url = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     }
     
-    __block NSURLSessionDataTask * urlSessionDataTask;
     if (requestType == LPApiRequestTypeGet) {
         urlSessionDataTask = [_sessionManager GET:url parameters:params progress:nil success:successWrap failure:failureWrap];
     }else if (requestType == LPApiRequestTypePost) {
         urlSessionDataTask = [_sessionManager POST:url parameters:params progress:nil success:successWrap failure:failureWrap];
     }
-    
     return urlSessionDataTask;
 }
 
-#pragma mark --取消当前所有网络请求
-- (void)cancelAllRequest {
-    [self.sessionManager.operationQueue cancelAllOperations];
-}
-
-#pragma makr --解析错误码
-- (LPApiErrorType)errorTypeWithCode:(NSInteger)code {
-    LPApiErrorType errorType = LPApiErrorTypeDefault;
-    if (code == -999 || code == -1012) {
-        errorType = LPApiErrorTypeCancelled;
-    }else if (code == -1001) {
-        errorType = LPApiErrorTypeTimeOut;
-    }else {
-        errorType = LPApiErrorTypeFail;
-    }
-    
-    return errorType;
+- (NSURLSessionDownloadTask *)downloadWithUrl:(NSString *)url params:(NSDictionary *)params progress:(LPHttpProgress)progress success:(void(^)(NSString *filePath))success callBack:(LPCallback)callback {
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    __block NSURLSessionDownloadTask * urlSessionDataTask = nil;
+    urlSessionDataTask = [_sessionManager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+        //下载进度
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            progress ? progress(downloadProgress) : nil;
+        });
+    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        //拼接缓存目录
+        NSString *downloadDir = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"Download"];
+        //打开文件管理器
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        //创建Download目录
+        [fileManager createDirectoryAtPath:downloadDir withIntermediateDirectories:YES attributes:nil error:nil];
+        //拼接文件路径
+        NSString *filePath = [downloadDir stringByAppendingPathComponent:response.suggestedFilename];
+        //返回文件位置的URL路径
+        return [NSURL fileURLWithPath:filePath];
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        if(callback && error) {callback(nil,error) ; return ;};
+        success ? success(filePath.absoluteString /** NSURL->NSString*/) : nil;
+        
+    }];
+    //开始下载
+    [urlSessionDataTask resume];
+    return urlSessionDataTask;
 }
 
 @end

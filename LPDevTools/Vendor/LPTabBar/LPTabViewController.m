@@ -20,23 +20,34 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self setupChildVc:[[LPSecondViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
-    [self setupChildVc:[[LPSecondViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
-    [self setupChildVc:[[LPSecondViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
-    [self setupChildVc:[[LPSecondViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+    [self setupChildVc:[[LPSecondViewController alloc] init] title:@"精华" image:@"" selectedImage:@"icon_select_tabbar"];
+    [self setupChildVc:[[LPSecondViewController alloc] init] title:@"精华" image:@"" selectedImage:@"icon_select_tabbar"];
+    [self setupChildVc:[[LPSecondViewController alloc] init] title:@"精华" image:@"icon_tabbar" selectedImage:@"icon_select_tabbar"];
+    [self setupChildVc:[[LPSecondViewController alloc] init] title:@"精华" image:@"icon_tabbar" selectedImage:@"icon_select_tabbar"];
     
     LPTabBar *tabBar = [[LPTabBar alloc]init];
+    
     [self setValue:tabBar forKey:@"tabBar"];
 }
 
 -(void)setupChildVc:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage{
-    //设置文字和图片
-    vc.tabBarItem.title = title;
-    vc.tabBarItem.image = [UIImage imageNamed:image];
-    vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
-    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
+    
     UINavigationController *navVc = [[UINavigationController alloc]initWithRootViewController:vc];
     [self addChildViewController:navVc];
+    navVc.tabBarItem.badgeValue = @"1";
+    //设置文字和图片
+    navVc.tabBarItem.title = title;
+    navVc.tabBarItem.image = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    navVc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
+    // 设置 tabbarItem 选中状态下的文字颜色(不被系统默认渲染,显示文字自定义颜色)
+    NSDictionary *dictHome = [NSDictionary dictionaryWithObject:[UIColor orangeColor] forKey:NSForegroundColorAttributeName];
+    [navVc.tabBarItem setTitleTextAttributes:dictHome forState:UIControlStateSelected];
+    
+    NSDictionary *dictHome1 = [NSDictionary dictionaryWithObject:[UIColor orangeColor] forKey:NSForegroundColorAttributeName];
+    [navVc.tabBarItem setTitleTextAttributes:dictHome1 forState:UIControlStateNormal];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

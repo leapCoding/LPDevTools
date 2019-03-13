@@ -7,7 +7,10 @@
 //
 
 #import "LPApiManager.h"
+#import "LPCommonMacro.h"
 #import "YYKit.h"
+#import "LPCategory.h"
+
 @interface LPApiManager ()
 
 @property (nonatomic, strong) NSURLSessionDataTask *task;
@@ -48,6 +51,28 @@
     return self;
 }
 
+//图片压缩处理
+- (NSArray *)imageCompression:(NSArray *)images {
+    NSMutableArray *files = @[].mutableCopy;
+    for (NSInteger i = 0; i < images.count; i++) {
+        if ([images[i] isKindOfClass:[UIImage class]]) {
+            UIImage *image = images[i];
+            image = [image scaledToSize:CGSizeMake(kScreen_Width, kScreen_Height)];
+            image = [UIImage rotateImage:image];
+            NSData *data = UIImageJPEGRepresentation(image, 0.6f);
+            NSString *typeStr = @".png";
+            NSString *str = [NSData contentTypeForImageData:data];
+            if (![NSString isEmpty:str]) {
+                typeStr = [NSString stringWithFormat:@".%@",str];
+            }
+            NSString *content = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+            NSDictionary *dic = @{@"Flag":@(i+1),@"Extension":typeStr,@"Data":content};
+            [files addObject:dic];
+        }
+    }
+    return files;
+}
+
 - (void)loadDataWithUrl:(NSString *)url params:(NSDictionary *)params className:(Class)className rquestType:(LPApiRequestType)requestType responseBlock:(ResponseBlock)responseBlock{
     self.task = [[LPNetWorkManager sharedManager] callApiWithUrl:url params:params requestType:requestType callBack:^(id responseObject, NSError *error) {
         ASLog(@"\nURL:%@\nparameters:%@\nResult:%@\n", url, params, error == nil ? responseObject : error);
@@ -57,11 +82,6 @@
             response.code = 10000;
             response.message = @"网络异常，请稍后再试！";
         }else {
-            
-            if ([responseObject[@"code"] integerValue] == 4) {
-                //账号被冻结
-                [[NSNotificationCenter defaultCenter]postNotificationName:accountfreezeNotification object:nil];
-            }
             response = [[LPNetWorkResponse alloc]initWithResult:responseObject className:className];
         }
         responseBlock(response);

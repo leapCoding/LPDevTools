@@ -37,6 +37,7 @@
 		E802BAC11F3050C9000E8B4B /* LPPictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E802BAC01F3050C9000E8B4B /* LPPictureCollectionViewCell.m */; };
 		E802BACD1F30523E000E8B4B /* LPPictureBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E802BACC1F30523E000E8B4B /* LPPictureBrowser.m */; };
 		E802BAD01F3179ED000E8B4B /* LPPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = E802BACF1F3179ED000E8B4B /* LPPicture.m */; };
+		E8056B3C22379416009C65B5 /* NSData+LPTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E8056B3B22379416009C65B5 /* NSData+LPTools.m */; };
 		E86EF67220941590007CAA98 /* LPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86EF67120941590007CAA98 /* LPBaseViewController.m */; };
 		E88BB20D1FC6AEF2004503BA /* LPPermissionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E88BB20C1FC6AEF2004503BA /* LPPermissionManager.m */; };
 		E8C206D41F5E354400AF50EF /* LPSlideBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C206D31F5E354400AF50EF /* LPSlideBarItem.m */; };
@@ -180,6 +181,8 @@
 		E802BACC1F30523E000E8B4B /* LPPictureBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPictureBrowser.m; sourceTree = "<group>"; };
 		E802BACE1F3179ED000E8B4B /* LPPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPicture.h; sourceTree = "<group>"; };
 		E802BACF1F3179ED000E8B4B /* LPPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPicture.m; sourceTree = "<group>"; };
+		E8056B3A22379416009C65B5 /* NSData+LPTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+LPTools.h"; sourceTree = "<group>"; };
+		E8056B3B22379416009C65B5 /* NSData+LPTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+LPTools.m"; sourceTree = "<group>"; };
 		E86EF67020941590007CAA98 /* LPBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPBaseViewController.h; sourceTree = "<group>"; };
 		E86EF67120941590007CAA98 /* LPBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPBaseViewController.m; sourceTree = "<group>"; };
 		E88BB20B1FC6AEF2004503BA /* LPPermissionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPPermissionManager.h; sourceTree = "<group>"; };
@@ -449,7 +452,6 @@
 			isa = PBXGroup;
 			children = (
 				E8FE823E1F258A1900E18C73 /* index.html */,
-				E8D3744A1F16060F0040B541 /* LPNetWorkManager */,
 				E8D373A41F15CB270040B541 /* LPToolKit */,
 				185161961DB772CE00FD1576 /* Assets.xcassets */,
 				185161AF1DB77D4F00FD1576 /* Classes */,
@@ -612,6 +614,7 @@
 		E8D373A41F15CB270040B541 /* LPToolKit */ = {
 			isa = PBXGroup;
 			children = (
+				E8D3744A1F16060F0040B541 /* LPNetWorkManager */,
 				0C21C6851F2C55410089C5B8 /* LPPhotoBrowser */,
 				E8FE83661F2B06BC00E18C73 /* CustomView */,
 				E8D373A51F15CB270040B541 /* Category */,
@@ -669,6 +672,8 @@
 				E8D374451F15FDD10040B541 /* UIScrollView+LPEmptyDataSet.m */,
 				E8D374471F16045A0040B541 /* UIScrollView+LPRefresh.h */,
 				E8D374481F16045A0040B541 /* UIScrollView+LPRefresh.m */,
+				E8056B3A22379416009C65B5 /* NSData+LPTools.h */,
+				E8056B3B22379416009C65B5 /* NSData+LPTools.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -807,8 +812,7 @@
 				E8D3744D1F16060F0040B541 /* LPNetWorkManager.h */,
 				E8D3744E1F16060F0040B541 /* LPNetWorkManager.m */,
 			);
-			name = LPNetWorkManager;
-			path = LPToolKit/LPNetWorkManager;
+			path = LPNetWorkManager;
 			sourceTree = "<group>";
 		};
 		E8FE83661F2B06BC00E18C73 /* CustomView */ = {
@@ -1003,6 +1007,7 @@
 				1847FEC71DD44A5800A4339B /* _JZValue.m in Sources */,
 				E8D373E51F15CB270040B541 /* UIView+LPTools.m in Sources */,
 				E8D374501F16060F0040B541 /* LPNetWorkManager.m in Sources */,
+				E8056B3C22379416009C65B5 /* NSData+LPTools.m in Sources */,
 				E8D373DD1F15CB270040B541 /* UIButton+Badge.m in Sources */,
 				E8D374351F15F8410040B541 /* LPResourcesManager.m in Sources */,
 				E8D373E91F15CB270040B541 /* LPJumpManager.m in Sources */,

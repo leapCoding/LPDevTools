@@ -26,6 +26,7 @@
 #import "NSUserDefaults+LPTools.h"
 #import "UIViewController+LPTools.h"
 #import "UIScrollView+LPEmptyDataSet.h"
+#import "NSData+LPTools.h"
 
 //#import "UITextView+Placeholder.h"
 //#import "UIBarButtonItem+Badge.h"

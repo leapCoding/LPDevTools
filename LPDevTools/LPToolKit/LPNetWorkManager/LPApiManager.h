@@ -9,37 +9,23 @@
 #import <Foundation/Foundation.h>
 #import "LPNetWorkManager.h"
 
-/**
- *   账户冻结退出登录
- */
-static NSString *accountfreezeNotification = @"accountfreezeNotification";
-
 @class LPNetWorkResponse;
 @interface LPApiManager : NSObject
 
 typedef void (^ResponseBlock)(LPNetWorkResponse *response);
-
-/** 网络请求requestUrl*/
-@property (nonatomic, copy) NSString *requestUrl;
-
-/** 网络请求类型*/
-@property (nonatomic, assign) LPApiRequestType requestType;
-
-/** 请求参数*/
-@property (nonatomic, strong) NSDictionary *params;
-
-/** 需要模型转换的类名*/
-@property (nonatomic, strong) Class modelClass;
-
+/** get请求 */
 + (instancetype)getUrl:(NSString *)url
     parameters:(NSDictionary *)parameters
      className:(Class)className
  responseBlock:(ResponseBlock)responseBlock;
-
+/** post请求 */
 + (instancetype)postUrl:(NSString *)url
             parameters:(NSDictionary *)parameters
              className:(Class)className
          responseBlock:(ResponseBlock)responseBlock;
+
+//图片压缩处理
+- (NSArray *)imageCompression:(NSArray *)images;
 
 + (void)cancelAllRequest;
 

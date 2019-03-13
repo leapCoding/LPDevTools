@@ -24,20 +24,28 @@ typedef NS_ENUM(NSUInteger, LPApiRequestType) {
     LPApiRequestTypePost,       //Post 请求
 };
 
-//网络请求错误类型
-typedef NS_ENUM(NSUInteger, LPApiErrorType) {
-    LPApiErrorTypeDefault = 0,
-    LPApiErrorTypeSuccess,           //API请求成功且返回数据正确，此时manager的数据是可以直接拿来使用的。
-    LPApiErrorTypeFail,              //请求失败
-    LPApiErrorTypeCancelled,         //取消网络请求
-    LPApiErrorTypeTimeOut,         //网络请求超时
+typedef NS_ENUM(NSUInteger, LPNetworkStatus) {
+    StatusUnknown           = -1,   //未知网络
+    StatusNotReachable      = 0,    //没有网络
+    StatusReachableViaWWAN  = 1,    //手机自带网络
+    StatusReachableViaWiFi  = 2     //wifi
 };
 
+
 typedef void(^LPCallback)(id responseObject, NSError *error);
+/** 上传或者下载的进度, Progress.completedUnitCount:当前大小 - Progress.totalUnitCount:总大小*/
+typedef void (^LPHttpProgress)(NSProgress *progress);
 
 @interface LPNetWorkManager : NSObject
-
+/**
+ *  请求头
+ */
 @property (nonatomic, strong) NSDictionary *headers;
+
+/**
+ *  获取网络
+ */
+@property (nonatomic,assign)LPNetworkStatus networkStats;
 
 + (NSMutableArray *)allTasks;
 
@@ -45,6 +53,6 @@ typedef void(^LPCallback)(id responseObject, NSError *error);
 
 - (NSURLSessionDataTask *)callApiWithUrl:(NSString *)url params:(NSDictionary *)params requestType:(LPApiRequestType)requestType callBack:(LPCallback)callback;
 
-- (void)cancelAllRequest;
+- (NSURLSessionDownloadTask *)downloadWithUrl:(NSString *)url params:(NSDictionary *)params progress:(LPHttpProgress)progress success:(void(^)(NSString *filePath))success callBack:(LPCallback)callback;
 
 @end

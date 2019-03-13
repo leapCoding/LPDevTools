@@ -41,6 +41,8 @@
 #pragma -mark  --WebViewDelegate
 //加载之前调用
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    NSString *requestString = [[request URL] absoluteString];
+    NSLog(@"%@",requestString);
     return YES;
 }
 //开始加载调用
@@ -53,15 +55,19 @@
     
     context[@"btnClick1"] = ^() {
         NSArray *args = [JSContext currentArguments];
-        NSString * func = [NSString stringWithFormat:@"alertName('%@');",@"OC后台传入数据"];
-        [context evaluateScript:func];
+//        NSString * func = [NSString stringWithFormat:@"alertName('%@');",@"OC后台传入数据"];
+//        [context evaluateScript:func];
+        JSValue *scancallback = context[@"alertMobile"];
+        [scancallback callWithArguments:@[@"12121"]];
     };
     
     context[@"test"] = ^() {
         NSArray *args = [JSContext currentArguments];
         NSLog(@"%@",args);
-        NSString * func = [NSString stringWithFormat:@"alertSendMsg('%@','%@');",@"1999999",@"OC后台传入数据"];
-        [context evaluateScript:func];
+//        NSString * func = [NSString stringWithFormat:@"alertSendMsg('%@','%@');",@"1999999",@"OC后台传入数据"];
+//        [context evaluateScript:func];
+        JSValue *scancallback = context[@"alertName"];
+        [scancallback callWithArguments:@[@"12121"]];
     };
 }
 

@@ -27,8 +27,8 @@
     
     LPTabBarControllerConfig *tabBarControllerConfig = [[LPTabBarControllerConfig alloc] init];
     
-//    self.window.rootViewController = tabBarControllerConfig.tabBarController;
-    self.window.rootViewController = [LPTabViewController new];
+    self.window.rootViewController = tabBarControllerConfig.tabBarController;
+//    self.window.rootViewController = [LPTabViewController new];
     [self.window makeKeyAndVisible];
    
     

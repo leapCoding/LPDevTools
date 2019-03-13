@@ -9,7 +9,7 @@
 #import "LPTabBarController.h"
 #import "LPHomeController.h"
 #import "LPNavigationController.h"
-
+#import "LPTabBar.h"
 @interface LPTabBarController ()
 
 @property (strong, nonatomic) LPHomeController *homeController;
@@ -35,16 +35,20 @@
     self.viewControllers = @[homeNav,homeNav1];
     
     [self customTabBarForViewController];
+    
+    LPTabBar *tabBar = [[LPTabBar alloc]init];
+    [self setValue:tabBar forKey:@"tabBar"];
+    
 }
 
 - (void)customTabBarForViewController {
     NSInteger index = 0;
     for (UITabBarItem *itemBar in self.tabBar.items) {
         itemBar.title = [self titles][index];
-        itemBar.image = [[UIImage imageNamed:[self images][index]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        itemBar.selectedImage = [[UIImage imageNamed:[self selectImages][index]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        [itemBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateNormal];
-        [itemBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateSelected];
+//        itemBar.image = [[UIImage imageNamed:[self images][index]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//        itemBar.selectedImage = [[UIImage imageNamed:[self selectImages][index]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//        [itemBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateNormal];
+//        [itemBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateSelected];
         index++;
     }
 }

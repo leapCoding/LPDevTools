@@ -10,5 +10,4 @@
 
 @interface LPTabBar : UITabBar
 
-
 @end
