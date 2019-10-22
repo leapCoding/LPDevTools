@@ -34,7 +34,7 @@ static NSString *const adImageName = @"adImageName";
         LPLaunchImageAdView *imgAdView = [[LPLaunchImageAdView alloc]init];
         imgAdView.getLBlaunchImageAdViewType(AdTypeFullScreen);
         imgAdView.localAdImg = image;
-        block(imgAdView);
+//        block(imgAdView);
     }
 }
 
