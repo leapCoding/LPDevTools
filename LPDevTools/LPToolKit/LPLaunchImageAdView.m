@@ -160,7 +160,7 @@ static NSString *const adImageName = @"adImageName";
 }
 
 -(void)setImgUrl:(NSString *)imgUrl{
-    _imgUrl = imgUrl;
+//    _imgUrl = imgUrl;
 //    [_adImgView sd_setImageWithURL:[NSURL URLWithString:_imgUrl] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
 //        if(image){
 ////            [self.adImgView setImage:[self imageCompressForWidth:image targetWidth:mainWidth]];
